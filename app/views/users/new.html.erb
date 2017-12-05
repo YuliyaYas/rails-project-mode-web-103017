@@ -6,8 +6,8 @@
   <%= f.label :last_name %>
   <%= f.text_field :last_name %>
   <br></br>
-  <%= f.label :birthdate %>
-  <%= f.date_select :birthdate, order:[:month, :day, :year] %>
+  <%= f.label :birthday %>
+  <%= f.date_select :birthday, start_year: 1965, order:[:month, :day, :year] %>
   <br></br>
   <%= f.submit %>
 <% end %>

@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params(:first_name, :last_name, :birthdate))
+    @month = params[:user]["birthday(2i)"]
+    @day = params[:user]["birthday(3i)"]
+    @year = params[:user]["birthday(1i)"]
+    @b_day = "#{@month}-#{@day}-#{@year}".to_date
+    @user = User.create(user_params(:first_name, :last_name, :birthday))
+    # byebug
   end
 
   def show
@@ -23,7 +28,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy 
+    @user.destroy
   end
 
   private
