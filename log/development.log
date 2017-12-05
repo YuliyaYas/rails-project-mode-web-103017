@@ -1422,3 +1422,1178 @@ Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
   
 app/controllers/users_controller.rb:20:in `show'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:36:04 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 52ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:37:53 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e0//gCyegLTYOD/NbzEcfhC00GFhArxQ4WD1A76SM8By0LBj84H+ikjx8FNBvUTBZHSNZO90S4yGEmI+W3YDHQ==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:38:57 -0500
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:39:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 49ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 41ms (Views: 22.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:39:22 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9AXCIMEdk+btLUo62uUkelAwsRWJYV/S2FAHKg95yGn9mo3DHgLt2H3khaT0aXzFJPDsEAcXqA6/IpAX6p34tA==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"5", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `birthday=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:39:48 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 17.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:41:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGyftboMQ8ues3HMqNjvc8a7Z/fjwzkxy950KcNLPRoB89BWZRM99Q56vlKGVLfMsns68m21zu2srOMUJq8Nxw==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"5", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tashawn"], ["last_name", "Williams"], ["birthday", "1990-05-03"], ["created_at", "2017-12-05 20:41:20.212617"], ["updated_at", "2017-12-05 20:41:20.212617"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2017-12-05 15:41:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:41:55 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 39ms (Views: 21.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:42:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CIL4qzG53bz6Lz3nmNxfAY4AiKBgvnWC7K0TArdhB4gBHbdI7qajgmrm8nm2UAe++sDVpe7Igl6L34Q/UoU3VQ==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"9", "birthday(3i)"=>"10", "birthday(1i)"=>"1979"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Yuliya"], ["last_name", "Yasenetska"], ["birthday", "1979-10-09"], ["created_at", "2017-12-05 20:42:21.083859"], ["updated_at", "2017-12-05 20:42:21.083859"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-12-05 15:42:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/9" for 127.0.0.1 at 2017-12-05 15:42:25 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ca7ns9SOG8mFAC5BTC44I/naO/+QD3eazxIRVMGILW4AMahQC5Fl9xXJ4d9iomCcjRpm+h55gEaoYIZpJGwdsw==", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 8ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:42:25 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 15:52:09 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1> New Event Form </h1>
+    2: <%= form_for @user do |f| %>
+    3:   <%= f.label :name %>
+    4:   <%= f.text_field :name %>
+    5:   <br></br>
+  
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___2513156244400710036_70204931731460'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 15:52:20 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 15:54:07 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 15:54:41 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fksQzkvn5TYcLqrHWoHSpvknfJ70bQ3n9FtHzlp6bw531F8tlPibCIznZVl0DYoZjechm3ob+juTKdDzv55f0w==", "event"=>{"name"=>"New", "description"=>"Best", "event_date"=>"2017-12-06"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 157596ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 15:57:25 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 382ms (Views: 227.8ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 15:59:05 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SH5AI2O6vqakrJFCyr92Fqqa7i4q+8p26CBdGltSibNB4Q/AvKXAmDRlXtzkMy6p3lqzK6SNPaqPUsonvra5bg==", "event"=>{"name"=>"Whoa", "description"=>"What is this", "event_date"=>"2017-12-06", "start_time"=>"16:00:26.182", "end_time"=>"17:00:26.196"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 143570ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 16:01:57 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (145.3ms)
+Completed 200 OK in 379ms (Views: 366.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 16:02:34 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kPWoVVK3HxIjyt9IzY6GvMR4zviaHU2Px827fsRazjuZaue2jahhLLMDENbjAt4DsLiT/RRrulOgvyxDIb7+5g==", "event"=>{"name"=>"New", "description"=>"Desc", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"12", "start_time(5i)"=>"01", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"13", "end_time(5i)"=>"01"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 3483526ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 17:00:37 -0500
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (92.1ms)
+Completed 200 OK in 474ms (Views: 312.5ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 17:00:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XttSJnUly2Rm+/LjzaJ/9zMVeaE8b/jcq5K3cIBizXc5CKrRsvpEwFSIFWhutFAqAwI4wqHSD8V3N3gJ+W76A==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started POST "/users" for 127.0.0.1 at 2017-12-05 17:02:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XttSJnUly2Rm+/LjzaJ/9zMVeaE8b/jcq5K3cIBizXc5CKrRsvpEwFSIFWhutFAqAwI4wqHSD8V3N3gJ+W76A==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tashawn"], ["last_name", "Williams"], ["birthday", "1990-03-31"], ["created_at", "2017-12-05 22:02:19.877095"], ["updated_at", "2017-12-05 22:02:19.877095"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 245ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2017-12-05 17:02:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 291ms (Views: 248.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 17:03:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XttSJnUly2Rm+/LjzaJ/9zMVeaE8b/jcq5K3cIBizXc5CKrRsvpEwFSIFWhutFAqAwI4wqHSD8V3N3gJ+W76A==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tashawn"], ["last_name", "Williams"], ["birthday", "1990-03-31"], ["created_at", "2017-12-05 22:03:45.037620"], ["updated_at", "2017-12-05 22:03:45.037620"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 272ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-12-05 17:03:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 382ms (Views: 279.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/11/edit" for 127.0.0.1 at 2017-12-05 17:03:55 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 407ms (Views: 377.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/11" for 127.0.0.1 at 2017-12-05 17:03:59 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cpaj7soHsp20kI6m4e+W38BJkM2MvlI5iPVVcEn68ysDCewNFRjMoyRZQTjPY85gtInNyALIpeXvh8JNrB7D9g==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"5", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Update User", "id"=>"11"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["birthday", "1990-05-31"], ["updated_at", "2017-12-05 22:03:59.891925"], ["id", 11]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/11
+Completed 302 Found in 94ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2017-12-05 17:03:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 376ms (Views: 273.7ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/users/11" for 127.0.0.1 at 2017-12-05 17:04:10 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DZyeH7bRPqq/qF8bZ7HE6NKF0M8p3RDEYS3h//N0bs4EA9H8ac5AlC9hkIVJPZxXpkWNyqer5xgGX3bCFpBeEw==", "id"=>"11"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 60ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 17:04:10 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (125.4ms)
+Completed 200 OK in 476ms (Views: 387.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:06:14 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (179.3ms)
+Completed 200 OK in 654ms (Views: 436.3ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:06:48 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cw7TVrVRGDHs0D5L3ocAVnZYv880DlD4PWafotzoBqQCkZy1ak5mD3wZ8dXwC1jpApjiyrp4pyRaFAifOQw2eQ==", "event"=>{"name"=>"Event", "description"=>"New Event", "event_date"=>"2017-12-07", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"06", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"21", "end_time(5i)"=>"06"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 129309ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:13:09 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (207.0ms)
+Completed 200 OK in 749ms (Views: 488.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:13:42 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (373.0ms)
+Completed 500 Internal Server Error in 404ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "dollars":String):
+     7:   <%= f.text_area :description %>
+     8:   <br></br>
+     9:   <%= f.label :price %>
+    10:   <%= f.text_field :price, value= "dollars" %>
+    11:   <br></br>
+    12:   <%= f.label :event_date %>
+    13:   <%= f.date_field :event_date, min: Time.now%>
+  
+app/views/events/new.html.erb:10:in `block in _app_views_events_new_html_erb___2513156244400710036_70204935173000'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___2513156244400710036_70204935173000'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:13:59 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (343.3ms)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "dollars":String):
+     7:   <%= f.text_area :description %>
+     8:   <br></br>
+     9:   <%= f.label :price %>
+    10:   <%= f.text_field :price, value="dollars" %>
+    11:   <br></br>
+    12:   <%= f.label :event_date %>
+    13:   <%= f.date_field :event_date, min: Time.now%>
+  
+app/views/events/new.html.erb:10:in `block in _app_views_events_new_html_erb___2513156244400710036_70204948040980'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___2513156244400710036_70204948040980'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:15:48 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (204.0ms)
+Completed 200 OK in 681ms (Views: 454.8ms | ActiveRecord: 19.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:16:04 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+KSV2TKAraV2OJraGgPK3CqbAeWcsTOW04ZmYtc2KD3xO9o67Z/Tm+bxVUQ0j5JjXltc4BLHxEq09PFfMtIY4A==", "event"=>{"name"=>"new", "description"=>"desc", "price"=>"3", "event_date"=>"2017-12-07", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"19", "start_time(5i)"=>"15", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"22", "end_time(5i)"=>"15"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 188829ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:19:18 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (196.4ms)
+Completed 200 OK in 472ms (Views: 455.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:19:30 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tlLO7xZAfkQiB8mlqX7T91r0CILp/3apVMK/aIpBV7G/zYEMyV8AerLOBjuH8otILjRVh2eJgXUzsChVb6VnbA==", "event"=>{"name"=>"name", "description"=>"name", "price"=>"3", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"19", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"19"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 14360ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:19:47 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (206.8ms)
+Completed 200 OK in 718ms (Views: 468.1ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:19:59 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2dhR3WEfsVvAVuQt9sqAak3oDbVogp0mJtW6pmc4COrQRx4+vgDPZVCfK7PYRtjVOShQsOb0avpBpy2bgtw4Nw==", "event"=>{"name"=>"test", "description"=>"test", "price"=>"test", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"19", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"19"}, "commit"=>"Create Event"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171204221403)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "birthday" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221403"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20171204221453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221453"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20171204221634)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "event_date" date, "start_time" varchar, "end_time" varchar, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_fd5598a81d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_events_on_category_id" ON "events" ("category_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221634"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20171204221705)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221705"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserComments (20171204221918)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "comment_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c4e95a001e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_4700b9144c"
+FOREIGN KEY ("comment_id")
+  REFERENCES "comments" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_comments_on_user_id" ON "user_comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_comments_on_comment_id" ON "user_comments" ("comment_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221918"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFavorites (20171204223512)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_d15744e438"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_dcf19e7ebc"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id" ON "favorites" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_category_id" ON "favorites" ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204223512"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPriceToEvents (20171205160904)
+  [1m[35m (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "events" ADD "price" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171205160904"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-05 22:21:31.338573"], ["updated_at", "2017-12-05 22:21:31.338573"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+[0m
+Completed 500 Internal Server Error in 119274ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:22:04 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2dhR3WEfsVvAVuQt9sqAak3oDbVogp0mJtW6pmc4COrQRx4+vgDPZVCfK7PYRtjVOShQsOb0avpBpy2bgtw4Nw==", "event"=>{"name"=>"test", "description"=>"test", "price"=>"test", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"19", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"19"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 5500ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:22:19 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2dhR3WEfsVvAVuQt9sqAak3oDbVogp0mJtW6pmc4COrQRx4+vgDPZVCfK7PYRtjVOShQsOb0avpBpy2bgtw4Nw==", "event"=>{"name"=>"test", "description"=>"test", "price"=>"test", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"19", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"19"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 17.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for User.):
+  
+app/controllers/events_controller.rb:18:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:22:40 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (225.9ms)
+Completed 200 OK in 753ms (Views: 490.8ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:23:10 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpOSNMTkp8Rza9a3+pgphJUlCpcw+K05iyTZx10I3ttvDN3XG/vZ+uOiGSnUFHE74eVXkr6OWuXsVk76uOzuBg==", "event"=>{"name"=>"Actual Event", "description"=>"This one is real", "price"=>"free", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"22", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"22"}, "commit"=>"Create Event"}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:20:in `create'
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:23:36 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpOSNMTkp8Rza9a3+pgphJUlCpcw+K05iyTZx10I3ttvDN3XG/vZ+uOiGSnUFHE74eVXkr6OWuXsVk76uOzuBg==", "event"=>{"name"=>"Actual Event", "description"=>"This one is real", "price"=>"free", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"22", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"22"}, "commit"=>"Create Event"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 447ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"events", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:20:in `create'
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:24:32 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpOSNMTkp8Rza9a3+pgphJUlCpcw+K05iyTZx10I3ttvDN3XG/vZ+uOiGSnUFHE74eVXkr6OWuXsVk76uOzuBg==", "event"=>{"name"=>"Actual Event", "description"=>"This one is real", "price"=>"free", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"22", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"22"}, "commit"=>"Create Event"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"events", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:20:in `create'
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:25:07 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZpOSNMTkp8Rza9a3+pgphJUlCpcw+K05iyTZx10I3ttvDN3XG/vZ+uOiGSnUFHE74eVXkr6OWuXsVk76uOzuBg==", "event"=>{"name"=>"Actual Event", "description"=>"This one is real", "price"=>"free", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"22", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"22"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 271373ms (ActiveRecord: 3.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:29:42 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (252.3ms)
+Completed 200 OK in 569ms (Views: 533.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:30:27 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (269.6ms)
+Completed 200 OK in 583ms (Views: 549.4ms | ActiveRecord: 4.2ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 17:31:18 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (123.4ms)
+Completed 200 OK in 498ms (Views: 409.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 17:31:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IOb1EFDKsw+StPmBua8m7Mq9VXWPOImeHfSSrytbAfgpebrzj9XNMQJ9Nh+XI35Tvn0IcAFOfkJ6hgWSzr8xJQ==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tashawn"], ["last_name", "Williams"], ["birthday", "1990-03-31"], ["created_at", "2017-12-05 22:31:32.555927"], ["updated_at", "2017-12-05 22:31:32.555927"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 86ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-12-05 17:31:32 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 416ms (Views: 304.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:31:44 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (819.8ms)
+Completed 500 Internal Server Error in 868ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x007fb3b78c3d78>):
+    22:   <%= f.collection_select :category_id, Category.all, :id, :name%>
+    23:   <br></br>
+    24:   <%= f.label :user %>
+    25:   <%= f.collection_select :user_id, User.all, :id, :name%>
+    26:   <br></br>
+    27:   <%= f.submit %>
+    28: <% end %>
+  
+app/views/events/new.html.erb:25:in `block in _app_views_events_new_html_erb___2513156244400710036_70204947029940'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___2513156244400710036_70204947029940'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:32:07 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (251.2ms)
+Completed 200 OK in 534ms (Views: 515.6ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:32:45 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IoFD31STn5V6qMLToRhdCJ2dCuwulMGdcVRlheZOI+grHgw8i4zhq+phDU2PlAW36V1X6aDiNkEWJvK4A6oTNQ==", "event"=>{"name"=>"Seriously this one will work", "description"=>"Seriously", "price"=>"3", "event_date"=>"2017-12-07", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"32", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"32", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Art"], ["created_at", "2017-12-05 22:33:26.498731"], ["updated_at", "2017-12-05 22:33:26.498731"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:33:33 -0500
+Completed 500 Internal Server Error in 48729ms (ActiveRecord: 0.0ms)
+
+
+Processing by EventsController#new as HTML
+  
+SystemExit (exit):
+  
+  Rendering events/new.html.erb within layouts/application
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (710.9ms)
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:33:35 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+Completed 200 OK in 1942ms (Views: 1906.7ms | ActiveRecord: 17.8ms)
+
+
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (340.1ms)
+Completed 200 OK in 752ms (Views: 697.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:33:57 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kjYn4NZPgl92eVWT3hBCqbd6+kjnAEM3L1ZzXlGqXj2bqWgDCVD8Yeawmg3wnBoWw7qnTWl2tOtIJORjtE5u4A==", "event"=>{"name"=>"Ok...for real", "description"=>"This is the one", "price"=>"3", "event_date"=>"2017-12-06", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"5", "start_time(4i)"=>"22", "start_time(5i)"=>"33", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"5", "end_time(4i)"=>"23", "end_time(5i)"=>"33", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20171204221403)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "birthday" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221403"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCategories (20171204221453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221453"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20171204221634)
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "date" datetime, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_fd5598a81d"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_events_on_category_id" ON "events" ("category_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221634"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateComments (20171204221705)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221705"]]
+  [1m[35m (15.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserComments (20171204221918)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "user_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "comment_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c4e95a001e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_4700b9144c"
+FOREIGN KEY ("comment_id")
+  REFERENCES "comments" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_comments_on_user_id" ON "user_comments" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_user_comments_on_comment_id" ON "user_comments" ("comment_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204221918"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFavorites (20171204223512)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_d15744e438"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_dcf19e7ebc"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id" ON "favorites" ("user_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_category_id" ON "favorites" ("category_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171204223512"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPriceToEvents (20171205160904)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "events" ADD "price" varchar[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171205160904"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-12-05 22:40:44.346678"], ["updated_at", "2017-12-05 22:40:44.346678"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+[0m
+Completed 500 Internal Server Error in 434340ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:41:14 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (1481.3ms)
+Completed 500 Internal Server Error in 1755ms (ActiveRecord: 10.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `event_date' for #<Event:0x007fb3b14c7040>):
+    10:   <%= f.text_field :price %>
+    11:   <br></br>
+    12:   <%= f.label :date %>
+    13:   <%= f.date_field :event_date, min: Time.now%>
+    14:   <br></br>
+    15:   <%= f.label :category %>
+    16:   <%= f.collection_select :category_id, Category.all, :id, :name%>
+  
+app/views/events/new.html.erb:13:in `block in _app_views_events_new_html_erb___2513156244400710036_70204950352180'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___2513156244400710036_70204950352180'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:42:16 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (1425.6ms)
+Completed 500 Internal Server Error in 1470ms (ActiveRecord: 22.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007fb3b10837e0>:0x007fb3ba4e9e98>):
+    22: <% end %>
+    23: 
+    24: 
+    25: <!-- <%= f.label :start_time %>
+    26: <%#= f.time_select :start_time, min: Time.now%>
+    27: <br></br>
+    28: <%#= f.label :end_time %>
+  
+app/views/events/new.html.erb:25:in `_app_views_events_new_html_erb___2513156244400710036_70204886320100'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:42:41 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (110.9ms)
+Completed 200 OK in 384ms (Views: 366.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:43:13 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (198.1ms)
+Completed 200 OK in 483ms (Views: 453.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:45:14 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (212.4ms)
+Completed 200 OK in 470ms (Views: 452.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:45:44 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/new.html.erb within layouts/application (77.1ms)
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Year):
+    10:   <%= f.text_field :price %>
+    11:   <br></br>
+    12:   <%= f.label :date %>
+    13:   <%= f.datetime_select :date, start_year: Year.now, order:[:month, :day, :year] %>
+    14:   <br></br>
+    15:   <%= f.label :category %>
+    16:   <%= f.collection_select :category_id, Category.all, :id, :name%>
+  
+app/views/events/new.html.erb:13:in `block in _app_views_events_new_html_erb___2513156244400710036_70204934208500'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___2513156244400710036_70204934208500'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:46:01 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (200.9ms)
+Completed 200 OK in 473ms (Views: 453.4ms | ActiveRecord: 3.9ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Art"], ["created_at", "2017-12-05 22:46:53.483292"], ["updated_at", "2017-12-05 22:46:53.483292"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 17:47:02 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (127.1ms)
+Completed 200 OK in 529ms (Views: 415.0ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 17:47:19 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A4WI86OuP9oFDxyk+i6v0CBD+ydi+wwSuG1G8aFaho8KGscQfLFB5JXG0zrUovdvVIOmIuyN+87fH9HMRL62Ug==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tashawn"], ["last_name", "Williams"], ["birthday", "1990-03-31"], ["created_at", "2017-12-05 22:47:19.363350"], ["updated_at", "2017-12-05 22:47:19.363350"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 95ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-12-05 17:47:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 396ms (Views: 285.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:47:27 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (273.8ms)
+Completed 200 OK in 551ms (Views: 529.8ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:47:43 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q4cxTPHFeN04HOzfFLituvZ3wqd0IISyaAMGVbjdKIKiGH6vLtoG46jVI0E6NPUFgrefovpWc24PcZFoXTkYXw==", "event"=>{"name"=>"Probably", "description"=>"hopefully", "price"=>"5", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"22", "date(5i)"=>"47", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 599713ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:57:48 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (535.7ms)
+Completed 200 OK in 1008ms (Views: 774.1ms | ActiveRecord: 36.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:57:58 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (538.0ms)
+Completed 200 OK in 1029ms (Views: 772.7ms | ActiveRecord: 40.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:58:07 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E1BaEada4K2kdYOV6PNEEp4/T9rP+9QcklrSE/hO0ywazxXyeEWekzS8TAvGfxyt6v8S30GNI8D1KEUuHarj8Q==", "event"=>{"name"=>"aldk", "description"=>"asldk", "price"=>"asl;dk", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"22", "date(5i)"=>"57", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:59:05 -0500
+Processing by EventsController#new as HTML
+Completed 500 Internal Server Error in 58026ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  Rendering events/new.html.erb within layouts/application
+  
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (792.0ms)
+Completed 200 OK in 1374ms (Views: 1329.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 17:59:06 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (584.4ms)
+Completed 200 OK in 1090ms (Views: 849.8ms | ActiveRecord: 40.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 17:59:15 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3SLsrmOToytsc0w5quSqW+r+t9NP+VTJLaFJXheBh5fUvaNNvIzdFfy6g6eEaPLknj7q1sGPoxVK095j8mW3Sg==", "event"=>{"name"=>"a;ldk", "description"=>"aldk", "price"=>"a;ldk", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"22", "date(5i)"=>"59", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 243770ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:03:24 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (548.0ms)
+Completed 200 OK in 1064ms (Views: 825.2ms | ActiveRecord: 26.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:03:33 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Laf6vWZwb1PgqTvx+Z1axsAaFpxqUbqR+LdPM01ko8wkOLVeuW8RbXBg9G/XEQJ5tNpLmeQnTU2fxdgOqICTEQ==", "event"=>{"name"=>"d", "description"=>"d", "price"=>"4", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"03", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
