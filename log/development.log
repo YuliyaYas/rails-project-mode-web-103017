@@ -862,3 +862,137 @@ Processing by UsersController#create as HTML
   [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Yuliya"], ["last_name", "Yasenetska"], ["birthday", "2017-12-05"], ["created_at", "2017-12-05 19:56:41.851679"], ["updated_at", "2017-12-05 19:56:41.851679"]]
   [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 130732ms (ActiveRecord: 6.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:14:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 14:58:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (135.8ms)
+Completed 200 OK in 668ms (Views: 418.8ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 14:59:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3GxN1jAvvKnmy2q2Y1KgQOvOXyGY+U+IXbwtg/Gui4a7v7Uh9/AzDdS4jT3ARI+d29keQgVEuJGBGeL6iKK8w==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:01:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (124.6ms)
+Completed 200 OK in 662ms (Views: 402.1ms | ActiveRecord: 13.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:01:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hTtJxFF6345+r/41pVluvKW+eZXSHB9gAM1BOMGn9viMpAYnjmWhsO5mMauL1TYD0X4kkFxq6Lxnv9YFJEPGJQ==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"12", "birthday(3i)"=>"5", "birthday(1i)"=>"2017"}, "commit"=>"Create User"}
+Unpermitted parameters: :birthday(2i), :birthday(3i), :birthday(1i)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:01:34 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (118.9ms)
+Completed 200 OK in 630ms (Views: 390.6ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:01:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KCUdt9nGnJuGL5gUb+ILCTvW+cRTcOrejlEFUKs17BQhulJUBtnipRbmV4pBblO2Txakwd0GHQLpI5JtTtHcyQ==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"12", "birthday(3i)"=>"5", "birthday(1i)"=>"2017"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:14:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:02:12 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (138.3ms)
+Completed 200 OK in 640ms (Views: 411.7ms | ActiveRecord: 9.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:02:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P7NF4WblqjSjl98rE6K3DKNh9DDflqiwgroQzOirZAw2LAoCufrUCjNeELU9Lu+z16GpNVHgX2zlyIfxDU9U0Q==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"12", "birthday(3i)"=>"5", "birthday(1i)"=>"2017"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:12:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:03:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (140.1ms)
+Completed 200 OK in 671ms (Views: 429.2ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:04:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3RvI4khWCkbSH16tfK9lyl+zCwELv6bPefx7b4Ty1AnUhIcBl0l0eELWkTNSIz11K3NWBIXJURMejuxSYRbk1A==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"12", "birthday(3i)"=>"5", "birthday(1i)"=>"2017"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 27339ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:14:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:05:54 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (144.4ms)
+Completed 200 OK in 616ms (Views: 393.9ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:06:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2tQhKjtFlwBVBkUgwfIIcQfoLF2KuR+7DcDq99D7Z0vTS27J5FrpPsXPir7vflDOcyhxWATP6Gdqsn3KNR9Xlg==", "user"=>{"first_name"=>"Kristin", "last_name"=>"Hettermann", "birthday(2i)"=>"12", "birthday(3i)"=>"5", "birthday(1i)"=>"2017"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 61134ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:15:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:07:05 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (151.8ms)
+Completed 200 OK in 671ms (Views: 418.4ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:07:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HYA0OcuQ7RGYgt6U1/69tSjgrLadVjT8t6D9IuT0NgUUH3vaFI+TLwhLEQr5cuUKXCDxsxMgwyDQ0mofARAG2A==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"9", "birthday(3i)"=>"10", "birthday(1i)"=>"1992"}, "commit"=>"Create User"}
+Unpermitted parameters: :birthday(2i), :birthday(3i), :birthday(1i)
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Yuliya"], ["last_name", "Yasenetska"], ["birthday", "1992-10-09"], ["created_at", "2017-12-05 20:07:20.918272"], ["updated_at", "2017-12-05 20:07:20.918272"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
