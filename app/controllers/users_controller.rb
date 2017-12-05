@@ -9,10 +9,11 @@ class UsersController < ApplicationController
     @day = params[:user]["birthday(3i)"]
     @year = params[:user]["birthday(1i)"]
     @b_day = "#{@month}-#{@day}-#{@year}".to_date
-    @user = User.new(user_params(:first_name, :last_name))
+    @user = User.new(first_name: params[:user][:first_name], last_name: params[:user][:last_name])
     @user.birthday = @b_day
     @user.save
-    byebug
+
+    redirect_to user_path(@user)
   end
 
   def show

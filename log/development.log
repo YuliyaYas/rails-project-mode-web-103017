@@ -996,3 +996,66 @@ Unpermitted parameters: :birthday(2i), :birthday(3i), :birthday(1i)
   [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (15.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Yuliya"], ["last_name", "Yasenetska"], ["birthday", "1992-10-09"], ["created_at", "2017-12-05 20:07:20.918272"], ["updated_at", "2017-12-05 20:07:20.918272"]]
   [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 115689ms (ActiveRecord: 19.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:16:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:09:21 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (141.9ms)
+Completed 200 OK in 690ms (Views: 431.5ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:09:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kKNtdYwYO43GjFrVvWejtOrX4+vVwaybVSILWD5+6tWZPCKWUwdFs1ZFlUuT6/sLnhe+7lu3W0cyUJxl25raCA==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:11:20 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (157.5ms)
+Completed 200 OK in 687ms (Views: 450.1ms | ActiveRecord: 22.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:11:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bv98wZQUvyyaNUWb1wAxnLvhJ6qtt1opMgVL9UOh5SsPYDMiSwvBEgr8igX5jGkjzyF6ryPBrfVVd9zIpkXV9g==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"W", "birthday(2i)"=>"12", "birthday(3i)"=>"5", "birthday(1i)"=>"2017"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Tashawn"], ["last_name", "W"], ["birthday", "2017-05-12"], ["created_at", "2017-12-05 20:11:29.198211"], ["updated_at", "2017-12-05 20:11:29.198211"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 85ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2017-12-05 15:11:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 410ms (Views: 283.4ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:12:13 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (131.5ms)
+Completed 200 OK in 439ms (Views: 422.7ms | ActiveRecord: 0.0ms)
+
+
