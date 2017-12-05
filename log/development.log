@@ -257,3 +257,25 @@ Migrating to AddPriceToEvents (20171205160904)
             FROM sqlite_temp_master
             WHERE name='index_user_comments_on_user_id' AND type='index'
 [0m
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 12:35:14 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 370ms (Views: 328.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 12:35:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 12:37:06 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
