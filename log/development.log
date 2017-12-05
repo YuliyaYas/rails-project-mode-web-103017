@@ -1059,3 +1059,247 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 439ms (Views: 422.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-12-05 15:14:03 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 448ms (Views: 406.0ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2017-12-05 15:14:14 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DnSIos0B7DlPjZu9Xk9bYAcoNVT553jcxQLSVqrmyHQH68dBEh6SB99EVCNwwwPfc+hoUXeRjwCicEVrTwL4qQ==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"9", "birthday(3i)"=>"10", "birthday(1i)"=>"1992"}, "commit"=>"Update User", "id"=>"5"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 115ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/5/edit" for 127.0.0.1 at 2017-12-05 15:17:18 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (118.4ms)
+Completed 200 OK in 677ms (Views: 403.1ms | ActiveRecord: 12.1ms)
+
+
+Started PATCH "/users/5" for 127.0.0.1 at 2017-12-05 15:17:25 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8JrjiTa3436HZex3gUX6tz74kw6BynetDSdm1w8KLWT5Baxq6aidQBesI+mvyaIISjjOCw+8gHFqVfHq6u4duQ==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"9", "birthday(3i)"=>"10", "birthday(1i)"=>"1992"}, "commit"=>"Update User", "id"=>"5"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 77402ms (ActiveRecord: 1.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/users_controller.rb:35:in `update'
+Started GET "/users/3" for 127.0.0.1 at 2017-12-05 15:18:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 552ms (Views: 289.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2017-12-05 15:18:58 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (145.7ms)
+Completed 200 OK in 471ms (Views: 434.2ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2017-12-05 15:19:18 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXHXkJO6SxMx6xW0iKZtGVMA+llKet4/IFSx2qCmwuHE7phzTKU1LaEi2iqmKjWmJ8CnXMQMKeNHJibnRULyPA==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Update User", "id"=>"2"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:30:in `update'
+Started GET "/users/2/edit" for 127.0.0.1 at 2017-12-05 15:21:13 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (147.0ms)
+Completed 200 OK in 742ms (Views: 461.7ms | ActiveRecord: 11.4ms)
+
+
+Started PATCH "/users/2" for 127.0.0.1 at 2017-12-05 15:21:30 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q8uEdPuW42zuSu9JURyUQle8/QhfG9HzdLVsvcmdejmiVMuXJImdUn6DINd/kMz9I3ygDdFtJi8Tx/uALHlK5A==", "user"=>{"first_name"=>"Tashawn", "last_name"=>"Williams", "birthday(2i)"=>"3", "birthday(3i)"=>"31", "birthday(1i)"=>"1990"}, "commit"=>"Update User", "id"=>"2"}
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:32:in `update'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 15:21:53 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (137.4ms)
+Completed 200 OK in 497ms (Views: 467.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 15:22:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJWkvQvNAJPUtcm3d6ZaGcKVU+BrnYtVI9wwdjS2ZUGdCute1NJ+rUR8BilZKgKmtlUO5eXrfIlErqdL0VJVnA==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "birthday(2i)"=>"8", "birthday(3i)"=>"5", "birthday(1i)"=>"2011"}, "commit"=>"Create User"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Elli"], ["last_name", "Shim"], ["birthday", "2011-05-08"], ["created_at", "2017-12-05 20:22:11.954666"], ["updated_at", "2017-12-05 20:22:11.954666"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 88ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-05 15:22:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 453ms (Views: 343.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-12-05 15:22:19 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (158.0ms)
+Completed 200 OK in 504ms (Views: 477.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-12-05 15:22:42 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (138.5ms)
+Completed 200 OK in 739ms (Views: 449.3ms | ActiveRecord: 16.4ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-12-05 15:22:56 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iUhLRGS6Q37N5c+xLtCgBwSg8b0pZersvMxissLxHlKA1wSnu6U9QF0sAC8AXPi4cGCsuKcTHTDbvvWPJxUujw==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "birthday(2i)"=>"12", "birthday(3i)"=>"6", "birthday(1i)"=>"1993"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 90ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-05 15:22:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 330ms (Views: 286.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-12-05 15:24:34 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (163.0ms)
+Completed 200 OK in 767ms (Views: 465.6ms | ActiveRecord: 13.5ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-12-05 15:24:43 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0y5ksMA20icy5noFsDGGTbvt1wsp81C3WvT05PmUOEnasStTHymsGaIvtZuevd7yzy2KDqeFp2s9hmPZHHAIlA==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "birthday(2i)"=>"12", "birthday(3i)"=>"14", "birthday(1i)"=>"2011"}, "commit"=>"Update User", "id"=>"7"}
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:32:in `update'
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-12-05 15:25:57 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (132.6ms)
+Completed 200 OK in 725ms (Views: 448.3ms | ActiveRecord: 11.5ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-12-05 15:26:03 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EjmQFMlTmTZSqviuqCr7ZuP/FANyufS3UTcfsxYE6Pcbpt/3FkznCMJjNzCGpqPZlz9JBvzPA2s2RYiO8+DYKg==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "birthday(2i)"=>"9", "birthday(3i)"=>"8", "birthday(1i)"=>"2011"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[33mUPDATE "users" SET "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["birthday", "2011-08-09"], ["updated_at", "2017-12-05 20:26:04.097750"], ["id", 7]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 121ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-05 15:26:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 424ms (Views: 396.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-05 15:26:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 344ms (Views: 301.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-12-05 15:27:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 358ms (Views: 332.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2017-12-05 15:27:37 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (159.1ms)
+Completed 200 OK in 497ms (Views: 453.0ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2017-12-05 15:27:44 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xAJDjQUp0+MwY8MsI4nv3YpB7pQ/+/IMWdnpg/m4fJTNnQxu2jat3aCqDLINBbdi/oGzkbGNBdA+q36+HFxMSQ==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"10", "birthday(3i)"=>"2", "birthday(1i)"=>"2017"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE "users" SET "birthday" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["birthday", "2017-02-10"], ["updated_at", "2017-12-05 20:27:44.222933"], ["id", 4]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 107ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-12-05 15:27:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 539ms (Views: 492.9ms | ActiveRecord: 1.6ms)
+
+

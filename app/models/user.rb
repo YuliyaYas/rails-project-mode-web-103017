@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :comments, through: :user_comments
 
   def to_s
-    self.first_name + '' + self.last_name
+    self.first_name + ' ' + self.last_name
   end
 
 end

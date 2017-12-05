@@ -1,0 +1,13 @@
+<h1> Edit user </h1>
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br></br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br></br>
+  <%= f.label :birthday %>
+  <%= f.date_select :birthday, start_year: 1965, order:[:month, :day, :year] %>
+  <br></br>
+  <%= f.submit %>
+<% end %>
