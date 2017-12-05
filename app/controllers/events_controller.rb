@@ -14,10 +14,8 @@ class EventsController < ApplicationController
     @month = params[:event]["date(2i)"].to_i
     @day = params[:event]["date(3i)"].to_i
     @year = params[:event]["date(1i)"].to_i
-    #@start_time = "#{@start_hour}:#{@start_min}"
-    byebug
-    @event = Event.create(name: params[:event][:name], description: params[:event][:description], price: params[:event][:price], )
-
+    @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
+    @event = Event.create(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date)
     redirect_to event_path(@event)
   end
 
@@ -31,13 +29,15 @@ class EventsController < ApplicationController
   end
 
   def update
-    @month = params[:user]["birthday(2i)"]
-    @day = params[:user]["birthday(3i)"]
-    @year = params[:user]["birthday(1i)"]
-    @date = "#{@month}-#{@day}-#{@year}".to_date
+    # byebug
+    @start_hour = params[:event]["date(4i)"].to_i
+    @start_min = params[:event]["date(5i)"].to_i
+    @month = params[:event]["date(2i)"].to_i
+    @day = params[:event]["date(3i)"].to_i
+    @year = params[:event]["date(1i)"].to_i
+    @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
     @event = Event.find(params[:id])
-    @event.event_date = @date
-    @event.update(first_name: params[:event][:first_name], last_name: params[:event][:last_name])
+    @event = Event.update(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date)
     redirect_to event_path(@event)
   end
 

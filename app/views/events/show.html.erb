@@ -1,1 +1,7 @@
-Show Page Son!
+<h1><%= @event.name %> </h1>
+<h3> Price: <%= @event.price %>    |    Date: <%= @event.date.to_s.split[0] %>, at <%= @event.date.to_s.split[1]%> </h3>
+<br></br>
+<h2> Description: </h2>
+<p><%= @event.description %> </p>
+<br></br>
+<%= link_to "Delete profile", event_path(@event), :data => {:confirm => "Are you sure?", :method => "Delete"}%>

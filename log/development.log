@@ -2597,3 +2597,651 @@ Completed 200 OK in 1064ms (Views: 825.2ms | ActiveRecord: 26.3ms)
 Started POST "/events" for 127.0.0.1 at 2017-12-05 18:03:33 -0500
 Processing by EventsController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"Laf6vWZwb1PgqTvx+Z1axsAaFpxqUbqR+LdPM01ko8wkOLVeuW8RbXBg9G/XEQJ5tNpLmeQnTU2fxdgOqICTEQ==", "event"=>{"name"=>"d", "description"=>"d", "price"=>"4", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"03", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 150613ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:19:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:06:09 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (12.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (560.4ms)
+Completed 200 OK in 1050ms (Views: 809.9ms | ActiveRecord: 35.9ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:06:26 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rC2F7U2Y+POzvs+l+TbYH0UpNLTWw7JWSR3KkwpcD02lssoOkoeGzSN3ADvXuoCgMelpsVi1RYoub12u77g/kA==", "event"=>{"name"=>"This is definitely the one!", "description"=>"Seriously", "price"=>"5", "date(2i)"=>"12", "date(3i)"=>"6", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"06", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"events", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:20:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:07:39 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (606.0ms)
+Completed 200 OK in 1177ms (Views: 917.7ms | ActiveRecord: 38.8ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:07:46 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V6DWmkwDhgfJq8S3rVifTrtfv/sENQ5uDrfDEDJn3QheP5l5kxz4OVliCymD1Mfxz5/i/opD+bJpxVQt14Pt1Q==", "event"=>{"name"=>"d", "description"=>"d", "price"=>"d", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"07", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 75985ms (ActiveRecord: 1.8ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:20:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:09:08 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (566.9ms)
+Completed 200 OK in 1113ms (Views: 823.4ms | ActiveRecord: 38.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:09:14 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JsxJD0Y1r5AhzCAfZqYJbyGAKqLT7UWKMx41V+wLqCIvUwbsmSrRrrEF74FIKlHQVUB3p12bslZUbKJqCe+Y/w==", "event"=>{"name"=>"d", "description"=>"d", "price"=>"d", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"09", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "d"], ["description", "d"], ["date", "2017-12-05 23:09:00"], ["user_id", 1], ["category_id", 1], ["created_at", "2017-12-05 23:09:14.928668"], ["updated_at", "2017-12-05 23:09:14.928668"], ["price", "d"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 17281ms (ActiveRecord: 10.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:20:in `create'
+Started GET "/events" for 127.0.0.1 at 2017-12-05 18:09:35 -0500
+Processing by EventsController#index as HTML
+Completed 406 Not Acceptable in 132ms
+
+
+  
+ActionController::UnknownFormat (EventsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:09:39 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (571.6ms)
+Completed 200 OK in 1028ms (Views: 841.1ms | ActiveRecord: 39.8ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:09:45 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bmxzn7C3NxGfbo2Yt/yhpzwdk+ceSFaNHOYPO+KIvnJn8zx8b6hJLw+nQgaZcPkYSN3O4pA+oVF7lJgGB2yOrw==", "event"=>{"name"=>"d", "description"=>"d", "price"=>"d", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"09", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "d"], ["description", "d"], ["date", "2017-12-05 23:09:00"], ["user_id", 1], ["category_id", 1], ["created_at", "2017-12-05 23:09:45.719580"], ["updated_at", "2017-12-05 23:09:45.719580"], ["price", "d"]]
+  [1m[35m (80.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/2
+Completed 302 Found in 309ms (ActiveRecord: 86.2ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2017-12-05 18:09:45 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 345ms (Views: 295.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/2" for 127.0.0.1 at 2017-12-05 18:20:27 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 315ms (Views: 289.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:20:36 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (223.6ms)
+Completed 200 OK in 521ms (Views: 487.8ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:23:29 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAA7oDflZVnqiD2aqUwk1yRBAgAySk6DXUuVA38JgeoBn3RD6PobZ3pB8gSHwHxoUIFfBbw8uV86OQI+mu2xNw==", "event"=>{"name"=>"Dope Event", "description"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper quam id nulla vestibulum, vitae volutpat augue faucibus. Cras sapien velit, efficitur vel rutrum eu, tristique et lectus. Donec consectetur fermentum faucibus. Phasellus et gravida dui, laoreet dictum arcu. ", "price"=>"Free", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"20", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dope Event"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper quam id nulla vestibulum, vitae volutpat augue faucibus. Cras sapien velit, efficitur vel rutrum eu, tristique et lectus. Donec consectetur fermentum faucibus. Phasellus et gravida dui, laoreet dictum arcu. "], ["date", "2017-12-05 23:20:00"], ["user_id", 1], ["category_id", 1], ["created_at", "2017-12-05 23:23:29.982875"], ["updated_at", "2017-12-05 23:23:29.982875"], ["price", "Free"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/3
+Completed 302 Found in 154ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 18:23:30 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 408ms (Views: 369.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 18:24:50 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 320ms (Views: 297.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 18:25:36 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 323ms (Views: 299.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 18:25:51 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 292ms (Views: 268.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:29:01 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (224.4ms)
+Completed 200 OK in 552ms (Views: 515.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 18:29:19 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 324ms (Views: 282.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 18:29:31 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 327ms (Views: 290.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:30:52 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCMbRRzLDKxEl4iHabAIIrkRM/Oo0QdozFvhdJP2A8NVvFSmw9RyktReRxlHPFCdzdFu9ian8LSrKXZJdhIzHg==", "event"=>{"name"=>"New", "description"=>"Event", "price"=>"free", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (15.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "New"], ["description", "Event"], ["date", "2017-12-05 23:29:00"], ["user_id", 1], ["category_id", 1], ["created_at", "2017-12-05 23:30:54.184664"], ["updated_at", "2017-12-05 23:30:54.184664"], ["price", "free"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/4
+Completed 302 Found in 858ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2017-12-05 18:30:54 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 454ms (Views: 332.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:31:26 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCMbRRzLDKxEl4iHabAIIrkRM/Oo0QdozFvhdJP2A8NVvFSmw9RyktReRxlHPFCdzdFu9ian8LSrKXZJdhIzHg==", "event"=>{"name"=>"New", "description"=>"Event", "price"=>"free", "date(2i)"=>"12", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "New"], ["description", "Event"], ["date", "2017-12-05 23:29:00"], ["user_id", 1], ["category_id", 1], ["created_at", "2017-12-05 23:31:28.644285"], ["updated_at", "2017-12-05 23:31:28.644285"], ["price", "free"]]
+  [1m[35m (16.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/5
+Completed 302 Found in 850ms (ActiveRecord: 61.2ms)
+
+
+Started GET "/events/5" for 127.0.0.1 at 2017-12-05 18:31:28 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 428ms (Views: 300.9ms | ActiveRecord: 1.6ms)
+
+
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 5]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 4]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/events" for 127.0.0.1 at 2017-12-05 18:34:30 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCMbRRzLDKxEl4iHabAIIrkRM/Oo0QdozFvhdJP2A8NVvFSmw9RyktReRxlHPFCdzdFu9ian8LSrKXZJdhIzHg==", "event"=>{"name"=>"Event", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$3", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Event"], ["description", "raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. "], ["date", "2017-09-05 23:29:00"], ["user_id", 1], ["category_id", 1], ["created_at", "2017-12-05 23:34:32.632067"], ["updated_at", "2017-12-05 23:34:32.632067"], ["price", "$3"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/6
+Completed 302 Found in 777ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:34:32 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 442ms (Views: 326.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:35:34 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 335ms (Views: 311.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:36:04 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (2.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 337ms (Views: 290.5ms | ActiveRecord: 2.8ms)
+
+
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:40:06 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 344ms (Views: 319.8ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:40:59 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 335ms (Views: 311.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:41:23 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 349ms (Views: 304.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:41:36 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 359ms (Views: 314.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:42:12 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 340ms (Views: 294.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:42:24 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 347ms (Views: 308.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:42:27 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 329ms (Views: 305.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 18:42:50 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 374ms (Views: 329.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 18:46:04 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (2.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (268.5ms)
+Completed 200 OK in 603ms (Views: 556.9ms | ActiveRecord: 6.6ms)
+
+
+Started PATCH "/events/6" for 127.0.0.1 at 2017-12-05 18:46:27 -0500
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FO7bWZ7qIpQkoCykzPOyYfMzu000AANQ/X9I+zKTVTZzPSOuWTWtMBbTyy9v5Z28wyT6Lqm99Ekh2oeCS59iQ==", "event"=>{"name"=>"Cool event", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$3", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Update Event", "id"=>"6"}
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/events_controller.rb:32:in `update'
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 18:47:04 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (687.2ms)
+Completed 200 OK in 1272ms (Views: 1002.0ms | ActiveRecord: 29.4ms)
+
+
+Started PATCH "/events/6" for 127.0.0.1 at 2017-12-05 18:47:16 -0500
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uqgObwYoi3zNRL31Kg2NJRk+6jt2OsxzkW/kawUWhvGzN0GM2Tf1Ql2NcmsEgdWabf63PvhMO6/2HXNW4PK2LA==", "event"=>{"name"=>"Cool event", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$3", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Update Event", "id"=>"6"}
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/events_controller.rb:32:in `update'
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 18:49:39 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (2.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (621.1ms)
+Completed 200 OK in 1213ms (Views: 908.8ms | ActiveRecord: 26.5ms)
+
+
+Started PATCH "/events/6" for 127.0.0.1 at 2017-12-05 18:49:58 -0500
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ytyDLhTGXYNLXiTqUolq6IKVM1ObuULxrYsVjp4dyK/DQ8zNy9kjvduX63R8BTJX9lVuVhXPtS3K+YKze/n4cg==", "event"=>{"name"=>"Cool event", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$100", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Update Event", "id"=>"6"}
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/events_controller.rb:38:in `update'
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 18:50:31 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (16.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (607.9ms)
+Completed 200 OK in 1194ms (Views: 897.2ms | ActiveRecord: 41.0ms)
+
+
+Started PATCH "/events/6" for 127.0.0.1 at 2017-12-05 18:50:44 -0500
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+30FRFOxPaNmavHEPxWd1N9d8BnUBNs8t8hegH3UQ1Xy4kqnjK5DnfajPloRmcVrq52tHFpyLODQusm9mDBziA==", "event"=>{"name"=>"Cool ", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$3", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Update Event", "id"=>"6"}
+Completed 500 Internal Server Error in 39640ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/events_controller.rb:33:in `update'
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 18:51:31 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (696.4ms)
+Completed 200 OK in 1313ms (Views: 1017.0ms | ActiveRecord: 28.0ms)
+
+
+Started PATCH "/events/6" for 127.0.0.1 at 2017-12-05 18:51:45 -0500
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"df+iFoNyDIahu2wW/EXTh2ks86101UGPkNXO+xh52HZ8YO31XG1yuDFyo4jSyYs4HeyuqPqjtlP3p1nG/Z3oqw==", "event"=>{"name"=>"Cool event", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$100", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Update Event", "id"=>"6"}
+Completed 500 Internal Server Error in 10637ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/events_controller.rb:33:in `update'
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 18:51:58 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (522.1ms)
+Completed 200 OK in 1030ms (Views: 792.8ms | ActiveRecord: 36.8ms)
+
+
+Started PATCH "/events/6" for 127.0.0.1 at 2017-12-05 18:52:09 -0500
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3GWCBQL2zSbvyfC0wljWHJrG9GnaFliaocALUw8ayaK7tnryxSlCgt26Fz9hTvnBqtG1Ckerr4N9ZcQqdhb+w==", "event"=>{"name"=>"Cool event", "description"=>"raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. ", "price"=>"$100", "date(2i)"=>"9", "date(3i)"=>"5", "date(1i)"=>"2017", "date(4i)"=>"23", "date(5i)"=>"29", "category_id"=>"1", "user_id"=>"1"}, "commit"=>"Update Event", "id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "events" SET "name" = ?, "description" = ?, "price" = ?, "date" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["name", "Cool event"], ["description", "raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. "], ["price", "$100"], ["date", "2017-09-05 23:29:00"], ["updated_at", "2017-12-05 23:52:10.001995"], ["id", 1]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "events" SET "name" = ?, "description" = ?, "price" = ?, "date" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["name", "Cool event"], ["description", "raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. "], ["price", "$100"], ["date", "2017-09-05 23:29:00"], ["updated_at", "2017-12-05 23:52:10.133407"], ["id", 2]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "events" SET "name" = ?, "description" = ?, "price" = ?, "date" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["name", "Cool event"], ["description", "raesent fermentum a diam id hendrerit. Aliquam orci magna, cursus sit amet iaculis sed, auctor eu neque. Nulla viverra felis id tincidunt molestie. Nunc at viverra magna, ut pharetra eros. Integer varius elit enim, id elementum dui tincidunt malesuada. Etiam ornare, nisi vitae sagittis vehicula, dolor arcu accumsan lectus, ut egestas sapien neque sit amet nunc. Nunc euismod diam sit amet nisi vehicula dapibus. "], ["price", "$100"], ["date", "2017-09-05 23:29:00"], ["updated_at", "2017-12-05 23:52:10.255890"], ["id", 3]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "events" SET "name" = ?, "price" = ?, "updated_at" = ? WHERE "events"."id" = ?[0m  [["name", "Cool event"], ["price", "$100"], ["updated_at", "2017-12-05 23:52:10.582512"], ["id", 6]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/1%2F2%2F3%2F6
+Completed 302 Found in 898ms (ActiveRecord: 41.2ms)
+
+
+Started GET "/events/1%2F2%2F3%2F6" for 127.0.0.1 at 2017-12-05 18:52:10 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1/2/3/6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 310ms (Views: 276.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-12-05 18:53:38 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 303ms (Views: 267.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/events/1" for 127.0.0.1 at 2017-12-05 18:53:46 -0500
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nJmzKC3wG9y+T+SJIJ5eE6UjoX6l//klPGYNjBwkHamVBvzL8u9l4i6GKxcOEgas0eP8eyuJDvlbFJqx+cAtdA==", "id"=>"1"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 1]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/new
+Completed 302 Found in 68ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 18:53:47 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (201.6ms)
+Completed 200 OK in 576ms (Views: 541.7ms | ActiveRecord: 4.2ms)
+
+
