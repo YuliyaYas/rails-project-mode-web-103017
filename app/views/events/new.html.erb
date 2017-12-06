@@ -6,6 +6,13 @@
   <%= f.label :description %>
   <%= f.text_area :description %>
   <br></br>
+  <%= f.label "Minimum Age" %>
+  <input type="integer" name="age" value="minimum age">
+  <%#= f.integer_field :age, :value => "enter minimum age for entry" %>
+  <br></br>
+  <%= f.label "Max Capacity" %>
+  <%= f.text_field :capacity, :value => "enter maximum capacity" %>
+  <br></br>
   <%= f.label :price %>
   <%= f.text_field :price, :value => "$" %>
   <br></br>

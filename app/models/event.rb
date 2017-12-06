@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  has_many :attendants
   belongs_to :user
   belongs_to :category
   has_many :comments
@@ -16,6 +17,10 @@ class Event < ApplicationRecord
       # byebug
     end
   end
+
+    def total_attendees
+      self.attendants.count
+    end
 
   private
 

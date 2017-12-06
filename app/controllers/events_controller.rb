@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     @day = params[:event]["date(3i)"].to_i
     @year = params[:event]["date(1i)"].to_i
     @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
-    @event = Event.create(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date, location:params[:event][:location])
+    @event = Event.create(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date, location:params[:event][:location], age: params[:age], capacity: params[:event][:capacity])
     redirect_to event_path(@event)
   end
 

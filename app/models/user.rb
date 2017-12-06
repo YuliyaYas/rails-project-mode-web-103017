@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :attendants
+  has_many :events, through: :attendants
   has_many :events
   has_many :favorites
   has_many :categories, through: :favorites
@@ -17,14 +19,45 @@ class User < ApplicationRecord
     Event.birthday_events(date)
   end
 
-  def fav_categories
-
+  def add_favorite(category)
+    Favorite.create(category_id: category.id, user_id: self.id)
   end
 
+  def fav_categories
+    Favorite.all.map do |f|
+     f.user_id == self.id
+    end
+  end
+
+  def host(event)
+    self.events_attending.find {|e| e.id == event.id}.user
+  end
+
+  def events_attending
+    self.attendants.all.map do |a|
+      a.event
+    end
+  end
+
+  def attend_event(event)
+    Attendant.create(user_id: self.id, event_id: event.id)
+  end
+
+
   def upcomming
+    arr = self.events_attending.sort_by {|event| event.date}[0..2]
+    # byebug
   end
 
   def most_popular
+    hash = {}
+    self.events.each do |e|
+      if !hash.include?(e.name)
+        hash["#{e.id}"] = e.total_attendees
+      end
+    end
+    byebug
+    hash
   end
 
 private
