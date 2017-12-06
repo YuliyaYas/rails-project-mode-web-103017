@@ -7,7 +7,7 @@
   <%= f.text_area :description %>
   <br></br>
   <%= f.label :price %>
-  <%= f.text_field :price %>
+  <%= f.text_field :price, :value => "$" %>
   <br></br>
   <%= f.label :date %>
   <%= f.datetime_select :date, start_year: 2017, order:[:month, :day, :year] %>
@@ -15,6 +15,10 @@
   <%= f.label :category %>
   <%= f.collection_select :category_id, Category.all, :id, :name%>
   <br></br>
+  <%= f.label :location %>
+  <%= f.text_field :location%>
+  <br></br>
+
   <%= f.label :user %>
   <%= f.collection_select :user_id, User.all, :id, :to_s%>
   <br></br>

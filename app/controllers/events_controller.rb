@@ -15,12 +15,15 @@ class EventsController < ApplicationController
     @day = params[:event]["date(3i)"].to_i
     @year = params[:event]["date(1i)"].to_i
     @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
-    @event = Event.create(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date)
+    @event = Event.create(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date, location:params[:event][:location])
     redirect_to event_path(@event)
   end
 
   def show
     @event = Event.find(params[:id])
+    @comment = Comment.new
+  # byebug
+
   end
 
 
@@ -37,7 +40,7 @@ class EventsController < ApplicationController
     @year = params[:event]["date(1i)"].to_i
     @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
     @event = Event.find(params[:id])
-    @event = Event.update(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date)
+    @event = Event.update(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date, location:params[:event][:location])
     redirect_to event_path(@event)
   end
 

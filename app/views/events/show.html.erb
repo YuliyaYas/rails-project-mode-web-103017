@@ -1,9 +1,26 @@
 <h1><%= @event.name %> </h1>
-<h3> Price: <%= @event.price %>    |    Date: <%= @event.date.to_s.split[0] %>, at <%= @event.date.to_s.split[1]%> </h3>
+<h3> Price: <%= @event.price %>    |    Date: <%= @event.date.strftime(" %A, %B %d, %Y")%>, at<%= @event.date.strftime(" %H:%M")%> </h3>
+<br></br>
+<h3> Location: <%= @event.location %> </h3>
 <br></br>
 <h2> Description: </h2>
 <p><%= @event.description %> </p>
 <br></br>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.093147301248!2d-73.98216588444325!3d40.75997597932675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f8d61b2f3d%3A0x92c4e681d9aada95!2sRadio+City+Music+Hall!5e0!3m2!1sen!2sus!4v1512525498336" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<a href="https://www.google.com/maps/place/11+Broadway,+New+York,+NY+10004" target="_blank">Directions to the Event</a>
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.093147301248!2d-73.98216588444325!3d40.75997597932675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f8d61b2f3d%3A0x92c4e681d9aada95!2sRadio+City+Music+Hall!5e0!3m2!1sen!2sus!4v1512525498336" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 <br></br>
 <%= link_to "Delete event", event_path(@event), :data => {:confirm => "Are you sure?", :method => "Delete"}%>
+
+<%= form_tag event_path(@event) do %>
+  <%= label_tag "Add comment:" %>
+  <%= text_area_tag :content %>
+  <br></br>
+  <%= label_tag :user %>
+  <%= collection_select :comment, :user_id, User.all, :id, :to_s%>
+  <br></br>
+  <%= submit_tag "Submit comment" %>
+<% end %>
+
+<% @event.comments.each do |comment| %>
+  <%= comment.content %> <%= link_to comment.user.to_s, user_path(comment.user) %>
+<% end %>

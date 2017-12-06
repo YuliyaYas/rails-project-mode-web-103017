@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :events
   resources :comments, except: [:index]
   resources :categories, only: [:index, :show]
+  post '/events/:id', to: "comments#create" 
 end
