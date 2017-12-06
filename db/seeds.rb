@@ -6,4 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# User.create(first_name: "Tashawn", last_name: "Williams", birthdate: ) 
+# User.create(first_name: "Tashawn", last_name: "Williams", birthdate: )
+arr = ["Film", "Festival", "Theatre", "Holiday Party", "Conference"]
+
+def seed_category(arr)
+  arr.each do |category_name|
+    Category.create(name: category_name)
+  end
+end
+seed_category(arr)

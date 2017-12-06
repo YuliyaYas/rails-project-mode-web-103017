@@ -3245,3 +3245,75 @@ Processing by EventsController#new as HTML
 Completed 200 OK in 576ms (Views: 541.7ms | ActiveRecord: 4.2ms)
 
 
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 19:50:17 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (133.2ms)
+Completed 200 OK in 443ms (Views: 428.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 19:50:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JtL/U23bPmvDvDii99aBmK1t3HrZ8V7Q9HYtmoPJXxkvTbCwssRAVVN19zzZWtkn2a2Bf1eHqQyTBLqnZi1vxA==", "user"=>{"first_name"=>"Yuliya", "last_name"=>"Yasenetska", "birthday(2i)"=>"9", "birthday(3i)"=>"10", "birthday(1i)"=>"1992"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Yuliya"], ["last_name", "Yasenetska"], ["birthday", "1992-09-10"], ["created_at", "2017-12-06 00:50:36.449058"], ["updated_at", "2017-12-06 00:50:36.449058"]]
+  [1m[35m (17.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 99ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-12-05 19:50:36 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 358ms (Views: 329.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 19:50:46 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (202.9ms)
+Completed 200 OK in 490ms (Views: 472.7ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Film"], ["created_at", "2017-12-06 01:04:11.124649"], ["updated_at", "2017-12-06 01:04:11.124649"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Festival"], ["created_at", "2017-12-06 01:04:11.129589"], ["updated_at", "2017-12-06 01:04:11.129589"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Theatre"], ["created_at", "2017-12-06 01:04:11.134078"], ["updated_at", "2017-12-06 01:04:11.134078"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Holiday Party"], ["created_at", "2017-12-06 01:04:11.138912"], ["updated_at", "2017-12-06 01:04:11.138912"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Conference"], ["created_at", "2017-12-06 01:04:11.143992"], ["updated_at", "2017-12-06 01:04:11.143992"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/events/3" for 127.0.0.1 at 2017-12-05 20:04:17 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 569ms (Views: 316.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 20:04:19 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (628.9ms)
+Completed 200 OK in 955ms (Views: 918.4ms | ActiveRecord: 20.7ms)
+
+
