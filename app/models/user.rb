@@ -46,7 +46,6 @@ class User < ApplicationRecord
 
   def upcomming
     arr = self.events_attending.sort_by {|event| event.date}[0..2]
-    # byebug
   end
 
   def most_popular
@@ -56,8 +55,8 @@ class User < ApplicationRecord
         hash["#{e.id}"] = e.total_attendees
       end
     end
-    byebug
-    hash
+    event_id = hash.max_by {|k, v| v}.first.to_i
+    Event.find(event_id)
   end
 
 private
