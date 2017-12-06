@@ -1,12 +1,9 @@
 class CommentsController < ApplicationController
 
-  def new
-    @comment = Comment.new
-  end
-
   def create
     @comment = Comment.create(content: params[:content], event_id: params[:id], user_id: params[:comment][:user_id])
-    # byebug
+    @event = Event.find(@comment.event_id)
+    redirect_to event_path(@event)
   end
 
   def show
