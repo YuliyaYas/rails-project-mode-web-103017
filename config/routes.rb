@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :comments, except: [:index, :new]
   resources :categories, only: [:index, :show]
   post '/events/:id', to: "comments#create"
+  get '/events/:id/attendants', to: "events#attendants", as: "event_attendants"
 end

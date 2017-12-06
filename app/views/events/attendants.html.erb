@@ -1,0 +1,6 @@
+<h1>All Attendants</h1>
+<ul>
+<% @event.attendants.each do |a|%>
+  <li><%= link_to a.user.to_s, user_path(a.user)%></li>
+<%end%>
+</ul>

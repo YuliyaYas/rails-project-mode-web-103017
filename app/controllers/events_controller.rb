@@ -23,9 +23,11 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @comment = Comment.new
   # byebug
-
   end
 
+  def attendants
+    @event = Event.find(params[:id])
+  end
 
   def edit
     @event = Event.find(params[:id])
