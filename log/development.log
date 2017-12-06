@@ -3317,3 +3317,580 @@ Processing by EventsController#new as HTML
 Completed 200 OK in 955ms (Views: 918.4ms | ActiveRecord: 20.7ms)
 
 
+Started POST "/events" for 127.0.0.1 at 2017-12-05 20:09:35 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"db/+nSqCFoP+sPOaDUp8K/zm/nM3edkPhKhrYnkmQNF8ILF+9Z1ovW55PAQjxiSUiCajdrkPLtPj2vxfnMJwDA==", "event"=>{"name"=>"Tribeca Film Festival", "description"=>"Curabitur rhoncus lacus quis rutrum maximus. Maecenas nisi odio, cursus nec metus eu, vestibulum posuere magna. Duis convallis, neque congue sollicitudin laoreet, risus elit egestas sapien, at tincidunt lorem felis consectetur nibh. Praesent sagittis ligula nec ante tincidunt, eu tempus tortor hendrerit. Maecenas dignissim ex in orci scelerisque ornare. Nunc interdum urna ut ultrices auctor. Duis lobortis rutrum egestas.", "price"=>"$20", "date(2i)"=>"10", "date(3i)"=>"6", "date(1i)"=>"2018", "date(4i)"=>"12", "date(5i)"=>"00", "category_id"=>"2", "user_id"=>"2"}, "commit"=>"Create Event"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tribeca Film Festival"], ["description", "Curabitur rhoncus lacus quis rutrum maximus. Maecenas nisi odio, cursus nec metus eu, vestibulum posuere magna. Duis convallis, neque congue sollicitudin laoreet, risus elit egestas sapien, at tincidunt lorem felis consectetur nibh. Praesent sagittis ligula nec ante tincidunt, eu tempus tortor hendrerit. Maecenas dignissim ex in orci scelerisque ornare. Nunc interdum urna ut ultrices auctor. Duis lobortis rutrum egestas."], ["date", "2018-10-06 12:00:00"], ["user_id", 2], ["category_id", 2], ["created_at", "2017-12-06 01:09:36.041952"], ["updated_at", "2017-12-06 01:09:36.041952"], ["price", "$20"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/7
+Completed 302 Found in 208ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2017-12-05 20:09:36 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 369ms (Views: 331.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 20:14:04 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (565.2ms)
+Completed 200 OK in 1044ms (Views: 802.8ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-05 20:15:23 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (137.1ms)
+Completed 200 OK in 420ms (Views: 405.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-05 20:16:06 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OKRHPjl5xJ2bUgEM+H3xy8i8jzl7C+yULPXgXZuxSOMxOwjd5ma6owubzpLW8al0vHzSPPV9G0hLh3dgflV4Pg==", "user"=>{"first_name"=>"Seth", "last_name"=>"Barden", "birthday(2i)"=>"2", "birthday(3i)"=>"6", "birthday(1i)"=>"1989"}, "commit"=>"Create User"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Seth"], ["last_name", "Barden"], ["birthday", "1989-02-06"], ["created_at", "2017-12-06 01:16:06.489954"], ["updated_at", "2017-12-06 01:16:06.489954"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 94ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-12-05 20:16:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 420ms (Views: 386.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 20:16:14 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (234.8ms)
+Completed 200 OK in 530ms (Views: 511.1ms | ActiveRecord: 3.1ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 3]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/events" for 127.0.0.1 at 2017-12-05 20:19:40 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"02u60SY01eNu382XsnfHiN7LnfFuA23uJlNr5UGZFO3a9PUy+Sur3f4WAgmc+583qgvA9OB1mjJBIfzYpH0kMA==", "event"=>{"name"=>"House Party", "description"=>"Pellentesque dictum scelerisque neque quis ornare. Vestibulum fringilla porta elit, ac blandit nulla facilisis eu. Etiam posuere a libero sed volutpat. Suspendisse mollis velit ut nisl maximus, nec ullamcorper lacus fringilla. Integer facilisis tempor mollis. Integer malesuada aliquam elit vel lobortis. Proin interdum vulputate massa sit amet elementum. ", "price"=>"Free", "date(2i)"=>"12", "date(3i)"=>"11", "date(1i)"=>"2017", "date(4i)"=>"20", "date(5i)"=>"00", "category_id"=>"5", "user_id"=>"3"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (4.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "House Party"], ["description", "Pellentesque dictum scelerisque neque quis ornare. Vestibulum fringilla porta elit, ac blandit nulla facilisis eu. Etiam posuere a libero sed volutpat. Suspendisse mollis velit ut nisl maximus, nec ullamcorper lacus fringilla. Integer facilisis tempor mollis. Integer malesuada aliquam elit vel lobortis. Proin interdum vulputate massa sit amet elementum. "], ["date", "2017-12-11 20:00:00"], ["user_id", 3], ["category_id", 5], ["created_at", "2017-12-06 01:19:40.685062"], ["updated_at", "2017-12-06 01:19:40.685062"], ["price", "Free"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/8
+Completed 302 Found in 247ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2017-12-05 20:19:40 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 393ms (Views: 350.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/8" for 127.0.0.1 at 2017-12-05 20:20:03 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 305ms (Views: 281.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-05 20:25:32 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (96.4ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <ul>
+    2: <% @categories.each do |category| %>
+    3:     <li> <%= category.name %> </li>
+    4: <% end %>
+    5: </ul>
+  
+app/views/categories/index.html.erb:2:in `_app_views_categories_index_html_erb___1021512839673000911_70204952972880'
+Started GET "/categories" for 127.0.0.1 at 2017-12-05 20:28:16 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (105.2ms)
+Completed 200 OK in 462ms (Views: 379.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-05 20:29:56 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 325ms (Views: 310.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:30:52 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 312ms (Views: 267.4ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 6], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 6], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 20:34:37 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (470.0ms)
+Completed 200 OK in 960ms (Views: 753.5ms | ActiveRecord: 15.9ms)
+
+
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 6], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? ORDER BY "events"."id" ASC LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? ORDER BY "events"."id" ASC LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? ORDER BY "events"."id" ASC LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."category_id" = ? ORDER BY "events"."id" ASC LIMIT ?[0m  [["category_id", 1], ["LIMIT", 1]]
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:43:17 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (2977.2ms)
+Completed 500 Internal Server Error in 3031ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `category' for #<#<Class:0x007fb3b0d61e90>:0x007fb3b90985e8>
+Did you mean?  @category):
+    1: <h1> <%= @category.name %> </h1>
+    2: <ul>
+    3:   <%= category.events.each do |event| %>
+    4:     <li>  <%= event.name %> </li>
+    5:     <p> Price: <%= @event.price %>    |    Date: <%= @event.date.to_s.split[0] %>, at <%= @event.date.to_s.split[1]%>  </p>
+    6:     <br></br>
+  
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3404093345124033665_70204944505860'
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:43:41 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (15.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (196.8ms)
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 16.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `price' for nil:NilClass):
+    2: <ul>
+    3:   <%= @category.events.each do |event| %>
+    4:     <li>  <%= event.name %> </li>
+    5:     <p> Price: <%= @event.price %>    |    Date: <%= @event.date.to_s.split[0] %>, at <%= @event.date.to_s.split[1]%>  </p>
+    6:     <br></br>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/categories/show.html.erb:5:in `block in _app_views_categories_show_html_erb__3404093345124033665_70204933661340'
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3404093345124033665_70204933661340'
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:43:49 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (16.9ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (141.7ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 18.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `price' for nil:NilClass):
+    2: <ul>
+    3:   <% @category.events.each do |event| %>
+    4:     <li>  <%= event.name %> </li>
+    5:     <p> Price: <%= @event.price %>    |    Date: <%= @event.date.to_s.split[0] %>, at <%= @event.date.to_s.split[1]%>  </p>
+    6:     <br></br>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/categories/show.html.erb:5:in `block in _app_views_categories_show_html_erb__3404093345124033665_70204928594220'
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3404093345124033665_70204928594220'
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:44:06 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (144.7ms)
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `price' for nil:NilClass):
+    2: <ul>
+    3:   <% @category.events.each do |event| %>
+    4:     <li>  <%= event.name %> </li>
+    5:     <!-- <p> Price: <%= @event.price %>    |    Date: <%= @event.date.to_s.split[0] %>, at <%= @event.date.to_s.split[1]%>  </p> -->
+    6:     <br></br>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/categories/show.html.erb:5:in `block in _app_views_categories_show_html_erb__3404093345124033665_70204951071780'
+app/views/categories/show.html.erb:3:in `_app_views_categories_show_html_erb__3404093345124033665_70204951071780'
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:44:37 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (43.8ms)
+Completed 200 OK in 379ms (Views: 331.1ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-05 20:45:28 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5baDQ1mwp23v7G1pmu5YXSUvFYYztxMvnv4qM/Z5BkXsKcyghq/ZU38love0YgDiUe9Ig73B5PP5jL0OE502mA==", "event"=>{"name"=>"Gallery Openning in Chelsea", "description"=>"Aenean id dignissim ex, nec scelerisque dui. Sed ornare consequat rhoncus. Curabitur faucibus dictum ligula, in vulputate lectus bibendum porttitor. Proin faucibus posuere consectetur.", "price"=>"Free", "date(2i)"=>"1", "date(3i)"=>"6", "date(1i)"=>"2018", "date(4i)"=>"01", "date(5i)"=>"34", "category_id"=>"1", "user_id"=>"2"}, "commit"=>"Create Event"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "user_id", "category_id", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gallery Openning in Chelsea"], ["description", "Aenean id dignissim ex, nec scelerisque dui. Sed ornare consequat rhoncus. Curabitur faucibus dictum ligula, in vulputate lectus bibendum porttitor. Proin faucibus posuere consectetur."], ["date", "2018-01-06 01:34:00"], ["user_id", 2], ["category_id", 1], ["created_at", "2017-12-06 01:45:28.401200"], ["updated_at", "2017-12-06 01:45:28.401200"], ["price", "Free"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/9
+Completed 302 Found in 215ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/events/9" for 127.0.0.1 at 2017-12-05 20:45:28 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 412ms (Views: 359.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:45:35 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (52.6ms)
+Completed 200 OK in 371ms (Views: 332.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:46:18 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (15.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 380ms (Views: 339.9ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-05 20:46:37 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered categories/show.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 353ms (Views: 328.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2017-12-05 20:46:46 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered categories/show.html.erb within layouts/application (46.2ms)
+Completed 200 OK in 382ms (Views: 342.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2017-12-05 20:46:59 -0500
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 342ms (Views: 325.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-12-05 20:47:02 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (16.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."category_id" = ?[0m  [["category_id", 3]]
+  Rendered categories/show.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 354ms (Views: 313.4ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/event/1" for 127.0.0.1 at 2017-12-05 20:47:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/event/1"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/events/1" for 127.0.0.1 at 2017-12-05 20:47:19 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=1):
+  
+app/controllers/events_controller.rb:23:in `show'
+Started GET "/events" for 127.0.0.1 at 2017-12-05 20:47:31 -0500
+Processing by EventsController#index as HTML
+Completed 406 Not Acceptable in 65ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EventsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-05 20:47:52 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (254.5ms)
+Completed 200 OK in 593ms (Views: 556.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/events/4" for 127.0.0.1 at 2017-12-05 20:47:56 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 18ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=4):
+  
+app/controllers/events_controller.rb:23:in `show'
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/events/6/edit" for 127.0.0.1 at 2017-12-05 20:48:12 -0500
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/edit.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/edit.html.erb within layouts/application (266.3ms)
+Completed 200 OK in 601ms (Views: 573.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 20:48:15 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 336ms (Views: 293.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/9" for 127.0.0.1 at 2017-12-05 20:55:16 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 328ms (Views: 290.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 20:56:39 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (2.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 364ms (Views: 337.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-05 20:58:56 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 358ms (Views: 333.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/events/7" for 127.0.0.1 at 2017-12-05 20:59:02 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 351ms (Views: 312.9ms | ActiveRecord: 1.7ms)
+
+

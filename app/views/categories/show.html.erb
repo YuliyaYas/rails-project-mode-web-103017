@@ -1,0 +1,8 @@
+<h1> Category: <%= @category.name %> </h1>
+<ul>
+  <% @category.events.each do |event| %>
+    <h2>  <%= event.name %> </h2>
+    <p> Price: <%= event.price %>    |    Date: <%= event.date.to_s.split[0] %>, at <%= event.date.to_s.split[1]%>  </p>
+    <br></br>
+  <% end %>
+</ul>
