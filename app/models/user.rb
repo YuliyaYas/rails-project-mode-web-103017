@@ -12,6 +12,11 @@ class User < ApplicationRecord
     self.first_name + ' ' + self.last_name
   end
 
+  def birthday_events
+    date = self.birthday.strftime("#{Date.current.year} %B %d").to_date
+    Event.birthday_events(date)
+  end
+
   def fav_categories
 
   end
