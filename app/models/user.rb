@@ -48,15 +48,21 @@ class User < ApplicationRecord
     arr = self.events_attending.sort_by {|event| event.date}[0..2]
   end
 
-  def most_popular
+  def find_highest
     hash = {}
     self.events.each do |e|
       if !hash.include?(e.name)
         hash["#{e.id}"] = e.total_attendees
       end
     end
-    event_id = hash.max_by {|k, v| v}.first.to_i
-    Event.find(event_id)
+    hash
+  end
+  
+  def most_popular
+    highest_value = self.find_highest.max_by{|k, v| v}.last
+    self.events.find_highest.select{|k, v| v == highest_value}.keys.map do |id|
+      Event.find(id)
+    end
   end
 
 private
@@ -66,5 +72,7 @@ private
       errors.add(:birthday, "Sorry, get big")
     end
   end
+
+
 
 end
