@@ -31,11 +31,11 @@ def seed_users
 end
 
 def seed_events
-  Event.create(name: "Tribeca Film Festival", description: "Lorem ipsum dolor sit amet, consecteturadipiscing...", date: "2017-12-18 15:00:00", age: "21", capacity: "5", user_id: 2, category_id: 1, price: "$50", location: "New York City")
-  Event.create(name: "Flatiron Movie Night", description: "Lorem ipsum dolor sit amet, consectetur adipiscing...", date: "2017-12-18 19:00:00", age: "18", capacity: "25", user_id: 1, category_id: 1, price: "Free", location: "11 Broadway st, NY, 10004")
-  Event.create(name: "House Party", description: "Lorem ipsum dolor sit amet, consectetur adipiscing...", date: "2018-01-08 21:30:00", age: "21", capacity: "50", user_id: 3, category_id: 4, price: "$10", location: "65 West 57th st, NY, 10019")
-  Event.create(name: "Gallery Opening in Chelsea", description: "Lorem ipsum dolor sit amet, consectetur adipiscing...", date: "2018-03-31 22:00:00", age: "21", capacity: "15", user_id: 2, category_id: 6, price: "Free", location: "21 West 14th st, NY")
-  Event.create(name: "Google Meetup", description: "Meet people and stuff", date: "2018-09-10 19:00:00", age: "18", capacity: "2500", user_id: 5, category_id: 5, price: "$100", location: "111 8th Ave, New York, NY 10011")
+  Event.create(name: "Tribeca Film Festival", description: "Lorem ipsum dolor sit amet, consecteturadipiscing...", date: "2017-12-18 15:00:00", age: "21", capacity: "5", user_id: 2, category_id: 1, price: "$50", location: "New York City", media: "https://tribecafilm.com/festival")
+  Event.create(name: "Flatiron Movie Night", description: "Lorem ipsum dolor sit amet, consectetur adipiscing...", date: "2017-12-18 19:00:00", age: "18", capacity: "25", user_id: 1, category_id: 1, price: "Free", location: "11 Broadway st, NY, 10004", media: "https://flatironschool.com/")
+  Event.create(name: "House Party", description: "Lorem ipsum dolor sit amet, consectetur adipiscing...", date: "2018-01-08 21:30:00", age: "21", capacity: "50", user_id: 3, category_id: 4, price: "$10", location: "65 West 57th st, NY, 10019", media: "https://www.youtube.com/watch?v=L7g9IV_qbAk")
+  Event.create(name: "Gallery Opening in Chelsea", description: "Lorem ipsum dolor sit amet, consectetur adipiscing...", date: "2018-03-31 22:00:00", age: "21", capacity: "15", user_id: 2, category_id: 6, price: "Free", location: "21 West 14th st, NY", media: "http://www.pacegallery.com/")
+  Event.create(name: "Google Meetup", description: "Meet people and stuff", date: "2018-09-10 19:00:00", age: "18", capacity: "2500", user_id: 5, category_id: 5, price: "$100", location: "111 8th Ave, New York, NY 10011", media: "https://google.com")
 end
 seed_category(arr)
 seed_users

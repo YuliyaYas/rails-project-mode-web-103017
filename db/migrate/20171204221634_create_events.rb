@@ -6,8 +6,7 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.datetime :date
       t.string :age
       t.string :capacity
-      # t.string :start_time
-      # t.string :end_time
+      t.string :media
 
       t.belongs_to :user, foreign_key: true
       t.belongs_to :category, foreign_key: true

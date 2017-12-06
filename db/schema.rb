@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20171206193805) do
     t.datetime "date"
     t.string "age"
     t.string "capacity"
+    t.string "media"
     t.integer "user_id"
     t.integer "category_id"
     t.datetime "created_at", null: false

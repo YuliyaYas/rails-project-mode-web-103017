@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :comments
-  validates :date, :location, :price, :name, presence: true
+  validates :date, :location, :age, :capacity, :price, :name, presence: true
   validate :current_or_future_date
 
   def event_day

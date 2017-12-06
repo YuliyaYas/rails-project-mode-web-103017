@@ -57,7 +57,7 @@ class User < ApplicationRecord
     end
     hash
   end
-  
+
   def most_popular
     highest_value = self.find_highest.max_by{|k, v| v}.last
     self.events.find_highest.select{|k, v| v == highest_value}.keys.map do |id|
