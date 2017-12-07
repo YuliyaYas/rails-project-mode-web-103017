@@ -1,7 +1,7 @@
 <h1>All Events</h1>
 <ul>
   <% @events.all.each do |e|%>
-  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | <%=e.date%></li>
+  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
 </ul>
 
 <%end%>

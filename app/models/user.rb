@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def fav_categories
-    Favorite.all.map do |f|
+    Favorite.all.select do |f|
      f.user_id == self.id
     end
   end

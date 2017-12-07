@@ -1,7 +1,7 @@
 <h1>Your Events</h1>
 <ul>
   <% @events.each do |e|%>
-  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | <%=e.date%></li>
+  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
 </ul>
 
 <%end%>
@@ -9,7 +9,7 @@
 <h1>Events You're Attending</h1>
 <ul>
   <% @events_attending.each do |e|%>
-  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | <%=e.date%></li>
+  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
 </ul>
 
 <%end%>

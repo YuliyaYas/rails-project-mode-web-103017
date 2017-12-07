@@ -56,6 +56,12 @@ class UsersController < ApplicationController
     @events_attending = @user.events_attending
   end
 
+  def favorite
+    @user = current_user
+    @category = Category.find(params[:id])
+    @user.add_favorite(@category)
+    redirect_to "/users/#{@user.id}/events"
+  end
   private
 
   def user_params
