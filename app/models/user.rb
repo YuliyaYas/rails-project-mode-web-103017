@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
   has_many :attendants
   has_many :events, through: :attendants
   has_many :events

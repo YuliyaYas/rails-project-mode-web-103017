@@ -5,13 +5,17 @@ class UsersController < ApplicationController
   end
 
   def create
+    @user = User.new(user_params)
     @month = params[:user]["birthday(2i)"]
     @day = params[:user]["birthday(3i)"]
     @year = params[:user]["birthday(1i)"]
     @b_day = "#{@year}-#{@month}-#{@day}".to_date
-    @user = User.create(first_name: params[:user][:first_name], last_name: params[:user][:last_name], birthday: @b_day)
-
-    redirect_to user_path(@user)
+    @user.birthday = @b_day
+    if @user.save
+      redirect_to @user
+    else
+      render :new
+    end
   end
 
   def show
@@ -41,8 +45,8 @@ class UsersController < ApplicationController
 
   private
 
-  def user_params(*args)
-    params.require(:user).permit(*args)
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :birthday, :email, :password, :password_confirmation)
   end
 
 

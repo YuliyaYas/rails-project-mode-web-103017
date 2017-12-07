@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   post '/events/:id', to: "comments#create"
   get '/events/:id/attendants', to: "events#attendants", as: "event_attendants"
+  get '/signup', to: "users#new"
+  post '/signup', to: "users#create"
+
 end

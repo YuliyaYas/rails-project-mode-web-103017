@@ -9280,3 +9280,601 @@ Processing by EventsController#attendants as HTML
 Completed 200 OK in 645ms (Views: 593.5ms | ActiveRecord: 11.3ms)
 
 
+Started GET "/users/1" for 127.0.0.1 at 2017-12-06 21:26:40 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 506ms (Views: 452.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-12-06 21:44:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 428ms (Views: 383.0ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-12-06 21:44:22 -0500
+Processing by EventsController#index as HTML
+Completed 406 Not Acceptable in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EventsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/events/6" for 127.0.0.1 at 2017-12-06 21:44:36 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 404 Not Found in 35ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=6):
+  
+app/controllers/events_controller.rb:23:in `show'
+Started GET "/events/3" for 127.0.0.1 at 2017-12-06 21:44:43 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (2.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = ?[0m  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (104.7ms)
+Completed 200 OK in 483ms (Views: 448.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/events/3" for 127.0.0.1 at 2017-12-06 22:09:17 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (2.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (14.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = ?[0m  [["event_id", 3]]
+  Rendered events/show.html.erb within layouts/application (138.2ms)
+Completed 200 OK in 634ms (Views: 565.8ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-06 22:09:57 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.1ms)
+Completed 200 OK in 61ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-06 22:10:24 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (6.0ms)
+Completed 200 OK in 34ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-12-06 22:10:31 -0500
+Processing by EventsController#index as HTML
+Completed 406 Not Acceptable in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (EventsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-06 22:10:35 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (131.0ms)
+Completed 200 OK in 420ms (Views: 399.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 09:09:56 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (151.2ms)
+Completed 200 OK in 585ms (Views: 505.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:22:32 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+...uffer.append=  form_for (@user, url: signup_path) do |f| @ou...
+...                               ^
+/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:23:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User:0x007fa6dac170b8>):
+     7:   <%= f.text_field :last_name %>
+     8:   <br></br>
+     9:   <%= f.label :email %>
+    10:   <%= f.text_field :email %>
+    11:   <br></br>
+    12:   <%= f.label :password %>
+    13:   <%= f.password_field :password %>
+  
+app/views/users/new.html.erb:10:in `block in _app_views_users_new_html_erb__4307702933152335512_70177305653900'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__4307702933152335512_70177305653900'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:23:40 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+...uffer.append=  form_for (@user, url:signup_path) do |f| @out...
+...                               ^
+/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:24:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+...uffer.append=  form_for (:user, url:signup_path) do |f| @out...
+...                               ^
+/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:26:11 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+...rl => {:action => signup_path}) do |f| @output_buffer.safe_a...
+...                               ^
+/Users/flatironschool/rails-project-mode-web-103017/app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/users/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/users/new.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:28:02 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (215.6ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post' for #<#<Class:0x007fa6e119de50>:0x007fa6db28c1c8>):
+    1: <h1> New User Form </h1>
+    2: <%= form_for @user, :url => signup_path, :method => post do |f| %>
+    3:   <%= f.label :first_name %>
+    4:   <%= f.text_field :first_name %>
+    5:   <br></br>
+  
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__4307702933152335512_70177309091280'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:28:18 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User:0x007fa6e10e00d0>):
+     7:   <%= f.text_field :last_name %>
+     8:   <br></br>
+     9:   <%= f.label :email %>
+    10:   <%= f.text_field :email %>
+    11:   <br></br>
+    12:   <%= f.label :password %>
+    13:   <%= f.password_field :password %>
+  
+app/views/users/new.html.erb:10:in `block in _app_views_users_new_html_erb__4307702933152335512_70177358509000'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__4307702933152335512_70177358509000'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToUsers (20171207142933)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171207142933"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPassworddigestToUser (20171207143025)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171207143025"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendants_on_event_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendants_on_event_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_events_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_events_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_favorites_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_comment_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_comment_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_comments_on_user_id' AND type='index'
+[0m
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:32:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:4:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2017-12-07 09:33:09 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 46ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:36:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 549853ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:46:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 9.7ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'password' for User.):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:46:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 28ms
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:48:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 26ms
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:49:33 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 24ms
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:52:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (invalid date):
+  
+app/controllers/users_controller.rb:9:in `parse'
+app/controllers/users_controller.rb:9:in `create'
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:53:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qY+xnVhHdiOUnMXl+neTXNPkWb6r0Dr74k7TmvrC5sugEP5+h1gIHQRVCnvU+8vjpyQEuyWmzSeFPESnHybWFg==", "user"=>{"first_name"=>"Test", "last_name"=>"Test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"7", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 24309ms (ActiveRecord: 0.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:15:in `create'
+Started GET "/signup" for 127.0.0.1 at 2017-12-07 09:53:51 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (196.7ms)
+Completed 200 OK in 2366ms (Views: 2180.1ms | ActiveRecord: 10.1ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:54:49 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pP4gIAX30lwYy1mee9Y36WqknFTXz19JO6HIVUedLLitYW/D2uisYogClgBVWm9WHmTBUVm5qJVc019oonkcZQ==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "email"=>"Elli@Shim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"9", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (156.3ms)
+Completed 200 OK in 567ms (Views: 436.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:55:18 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X5u1gA0r+1wgWAJcS1962bHAUrOTw5HpWHY9IJpTJ9xWBPpj0jSFYrCRzcJl0yJmxQAPth21ZjU/BKodf7cXAQ==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "email"=>"Elli@Shim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"9", "birthday(1i)"=>"2017"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 66626ms (ActiveRecord: 10.5ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:15:in `create'
+Started GET "/signup" for 127.0.0.1 at 2017-12-07 09:56:41 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (182.7ms)
+Completed 200 OK in 1000ms (Views: 527.4ms | ActiveRecord: 19.2ms)
+
+
+Started POST "/signup" for 127.0.0.1 at 2017-12-07 09:57:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jVMhK6wnpjCEXqMJbnHm1wM9DHZcBsz5G9dfILKhy5CEzG7IczjYDhSXbJdA/b5od/1Rc9JwOyV8pcgdV0X7TQ==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shim", "email"=>"Elli@Shim.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "birthday(2i)"=>"12", "birthday(3i)"=>"9", "birthday(1i)"=>"1990"}, "commit"=>"Create my account"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "birthday", "created_at", "updated_at", "email", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Elli"], ["last_name", "Shim"], ["birthday", "1990-12-09"], ["created_at", "2017-12-07 14:57:00.822193"], ["updated_at", "2017-12-07 14:57:00.822193"], ["email", "Elli@Shim.com"], ["password_digest", "$2a$10$O40dHVr7N59SRTX0OdqVzOrgsrNGGseRL98R4UsYmf4lx039PcFMS"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 241ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 09:57:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 546ms (Views: 485.3ms | ActiveRecord: 1.6ms)
+
+
