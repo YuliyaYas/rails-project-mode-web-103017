@@ -1,7 +1,7 @@
 <h1> Category: <%= @category.name %> </h1>
 <ul>
   <% @category.events.each do |event| %>
-    <h2>  <%= event.name %> </h2>
+    <h2>  <%= link_to event.name, event_path(event) %> </h2>
     <p> Price: <%= event.price %>    |    Date: <%= event.date.strftime(" %A, %B %d, %Y") %>, at <%= event.date.strftime(" %H:%M")%>  </p>
     <p> Location: <%= event.location%></p>
     <br></br>

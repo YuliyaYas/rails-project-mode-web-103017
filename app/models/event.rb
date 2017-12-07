@@ -1,4 +1,6 @@
 class Event < ApplicationRecord
+  # has_many :event_comments
+  # has_many :comments, through: :event_comments
   has_many :attendants
   belongs_to :user
   belongs_to :category
@@ -30,6 +32,11 @@ class Event < ApplicationRecord
       Event.find(id)
     end
   end
+
+
+  # def comments
+  #   self.event_comments.map {|c| c}
+  # end
 
   private
 

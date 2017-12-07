@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authorized, only: [:edit, :update, :delete]
+  before_action :authorized, only: [:edit, :update, :destroy]
   def index
     @events = Event.all
   end
@@ -22,7 +22,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:email])
+    @user = current_user
     @event = Event.find(params[:id])
     @comment = Comment.new
   end
@@ -43,7 +43,6 @@ class EventsController < ApplicationController
   end
 
   def update
-    # byebug
     @event = Event.find(params[:id])
     @event.update(event_params)
     @start_hour = params[:event]["date(4i)"].to_i

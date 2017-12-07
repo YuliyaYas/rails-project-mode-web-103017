@@ -3,6 +3,10 @@
   <head>
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" %>
     <%= link_to "Log Out", logout_path%>
+    <a href="/users/<%=session[:email]%>">Profile</a>
+    <%= link_to "Events", events_path%>
+    <a href="/users/<%=session[:email]%>/events">Your Events</a>
+    <%= link_to "Categories", categories_path%>
     <title>Mod2RailsProject</title>
     <%= csrf_meta_tags %>
 

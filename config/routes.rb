@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   post '/sessions', to: "sessions#create", as: "sessions"
   get '/logout', to: "sessions#destroy", as: "logout"
+  get '/users/:id/events', to: "users#events", as: "user_events"
+  get '/users/:id/categories/favorites', to: "users#favorite", as: "favorite"
 end

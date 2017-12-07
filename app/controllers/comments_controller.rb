@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
   before_action :authorized, only: [:update, :delete, :edit]
+
   def create
-    @comment = Comment.create(content: params[:content], event_id: params[:id], user_id: params[:comment][:user_id])
-    @event = Event.find(@comment.event_id)
+    @comment = Comment.new(comment_params)
+    @event = Event.find(params[:id])
+    @comment.event_id = @event.id
+    @comment.save
     redirect_to event_path(@event)
   end
 
@@ -16,7 +19,7 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params[:id])
-    @comment.update(comment_params(:content))
+    @comment.update(comment_params)
   end
 
   def destroy
@@ -26,8 +29,8 @@ class CommentsController < ApplicationController
 
   private
 
-  def comment_params(*args)
-    params.require(:comment).permit(*args)
+  def comment_params
+    params.permit(:content, :user_id)
   end
 
   def authorized
@@ -40,4 +43,5 @@ class CommentsController < ApplicationController
       redirect_to event_path(@event)
     end
 
+  end
 end

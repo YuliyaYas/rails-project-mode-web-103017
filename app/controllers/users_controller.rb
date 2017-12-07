@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     @b_day = "#{@year}-#{@month}-#{@day}".to_date
     @user.birthday = @b_day
     if @user.save
-      redirect_to @user
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
@@ -51,6 +50,12 @@ class UsersController < ApplicationController
     redirect_to new_user_path
   end
 
+  def events
+    @user = current_user
+    @events = @user.events
+    @events_attending = @user.events_attending
+  end
+
   private
 
   def user_params
@@ -60,7 +65,7 @@ class UsersController < ApplicationController
   def authorized
     if logged_in?
     else
-      redirect_to signin_path
+      redirect_to login_path
     end
   end
 

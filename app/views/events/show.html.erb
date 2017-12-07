@@ -18,7 +18,7 @@
   <%= text_area_tag :content %>
   <br></br>
   <%= label_tag :user %>
-  <%= collection_select :comment, :user_id, User.all, :id, :to_s%>
+  <input type="hidden" name="user_id" value="<%=@user.id%>">
   <br></br>
   <%= submit_tag "Submit comment" %>
 <% end %>
