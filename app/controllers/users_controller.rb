@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authorize, only: [:show, :edit, :update, :delete]
+  before_action :authorized, only: [:show, :edit, :update, :delete]
   def new
     @user = User.new
   end
@@ -63,5 +63,11 @@ class UsersController < ApplicationController
     params.require(:user).permit(:first_name, :last_name, :birthday, :email, :password, :password_confirmation)
   end
 
+  def authorized
+    if logged_in?
+    else
+      redirect_to signin_path
+    end
+  end
 
 end

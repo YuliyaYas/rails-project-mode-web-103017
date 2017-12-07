@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-
+  before_action :authorized, only: [:edit, :update, :delete]
   def index
     @events = Event.all
   end
@@ -24,7 +24,6 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @comment = Comment.new
-  # byebug
   end
 
   def attendants
@@ -59,6 +58,16 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :description, :price, :category_id, :user_id, :age, :capacity, :location)
+  end
+
+  def authorized
+    @event = Event.find(params[:id])
+    @user = current_user
+    if @event.user_id == @user.id
+    else
+      flash[:message] = "This aint your son!"
+      redirect_to event_path(@event)
+    end
   end
 
 end

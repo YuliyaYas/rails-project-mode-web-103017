@@ -16,12 +16,12 @@ class SessionsController < ApplicationController
       redirect_to @user
     else
       flash[:message] = "Wrong username and password"
-      redirect_to signin_path
+      redirect_to login_path
     end
   end
 
   def destroy
     session[:email] = nil
-    redirect_to signin_path
+    redirect_to login_path
   end
 end

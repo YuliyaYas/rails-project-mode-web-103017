@@ -12,5 +12,8 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  def authorized?
+      session[:email] == current_user.id
+  end
 
 end
