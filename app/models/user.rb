@@ -73,6 +73,10 @@ class User < ApplicationRecord
     end
   end
 
+  def hosted_events
+    Event.all.select {|e| e.host == self}
+  end
+
 private
 
   def old_enough

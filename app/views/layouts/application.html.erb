@@ -2,13 +2,17 @@
 <html>
   <head>
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" %>
-    <%= link_to "Log Out", logout_path%>
+<%if logged_in?%>
     <a href="/users/<%=session[:email]%>">Profile</a>
     <%= link_to "Events", events_path%>
     <a href="/users/<%=session[:email]%>/events">Your Events</a>
     <%= link_to "Categories", categories_path%>
     <%= link_to "Create Event", new_event_path%>
-
+    <%= link_to "Log Out", logout_path%>
+<%else%>
+<%= link_to "Log In", login_path%>
+<%=link_to "Sign Up", signup_path%>
+<%end%>
     <title>Mod2RailsProject</title>
     <%= csrf_meta_tags %>
 

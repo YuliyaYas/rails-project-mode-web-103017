@@ -1,5 +1,5 @@
 <h1><%= @event.name %> </h1>
-<h3> Price: <%= @event.price %>    |    Date: <%= @event.date.strftime(" %A, %B %d, %Y")%>, at<%= @event.date.strftime(" %H:%M")%> </h3>
+<h3>Host: <%=link_to @event.host.to_s, visitor_path(@event.host)%>   |    Price: <%= @event.price %>    |    Date: <%= @event.date.strftime(" %A, %B %d, %Y")%>, at<%= @event.date.strftime(" %H:%M")%> </h3>
 <br></br>
 <h3> Location: <%= @event.location %> </h3>
 <br></br>
@@ -24,5 +24,5 @@
 <% end %>
 
 <% @event.comments.each do |comment| %>
-  <%= comment.content %> <%= link_to comment.user.to_s, user_path(comment.user) %>
+  <%= comment.content %> <%= link_to comment.user.to_s, visitor_path(comment.user) %>
 <% end %>

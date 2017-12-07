@@ -8,6 +8,10 @@ class Event < ApplicationRecord
   validates :date, :location, :age, :capacity, :price, :name, presence: true
   validate :current_or_future_date
 
+  def host
+    self.user
+  end
+
   def event_day
     event_day = self.date.strftime("#{Date.current.year} %B %d").to_date
   end

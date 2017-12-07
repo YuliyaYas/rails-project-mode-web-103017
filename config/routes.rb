@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   get '/logout', to: "sessions#destroy", as: "logout"
   get '/users/:id/events', to: "users#events", as: "user_events"
   get '/users/categories/:id', to: "users#favorite", as: "favorites"
+  get '/visit/users/:id', to: "users#visitor_profile", as: "visitor"
 end

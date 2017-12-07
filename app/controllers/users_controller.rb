@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :logged_in?, only: [:show, :edit, :update, :delete]
   before_action :authorized, only: [:show, :edit, :update, :delete]
   def new
     @user = User.new
@@ -20,13 +21,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    if current_user.id == params[:id].to_i
+    if logged_in? && current_user.id == params[:id].to_i
          @user = User.find(params[:id])
     else
-       redirect_to user_path(current_user.id)
+      @user = User.find(params[:id])
+      redirect_to visitor_path(@user)
     end
   end
 
+  def visitor_profile
+    @user = User.find(params[:id])
+  end
 
   def edit
     @user = User.find(params[:id])
