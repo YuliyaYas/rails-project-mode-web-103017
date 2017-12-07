@@ -9878,3 +9878,604 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 546ms (Views: 485.3ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-12-07 10:10:30 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 1287ms
+
+
+  
+NoMethodError (undefined method `authorize' for #<UsersController:0x007f9b9ef34b20>):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:179:in `block in halting_and_conditional'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-12-07 10:11:01 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (136.8ms)
+Completed 200 OK in 1024ms (Views: 507.2ms | ActiveRecord: 18.8ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-12-07 10:11:10 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aAUjL9b7nCrCFAVEJ0DCg5omj+tHQ6aPb5r6cdqNFMphmmzMCeTiFFLdytoJzJo87ubS7sk1UVMI6G1MP2kkFw==", "user"=>{"first_name"=>"Elli", "last_name"=>"Shimmy", "birthday(2i)"=>"12", "birthday(3i)"=>"9", "birthday(1i)"=>"1990"}, "commit"=>"Update User", "id"=>"7"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "users" SET "last_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_name", "Shimmy"], ["updated_at", "2017-12-07 15:11:10.928523"], ["id", 7]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 161ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:11:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:24:in `show'
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:11:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 193953ms
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:14:55 -0500
+  
+Processing by UsersController#show as HTML
+SystemExit (exit):
+  Parameters: {"id"=>"7"}
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:25:in `show'
+Completed 500 Internal Server Error in 4217ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:25:in `show'
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:15:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+Completed 500 Internal Server Error in 89ms
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users_controller.rb:24:in `show'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:15:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signin" for 127.0.0.1 at 2017-12-07 10:15:30 -0500
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 139ms
+
+
+  
+ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/signin" for 127.0.0.1 at 2017-12-07 10:18:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:19:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 52ms
+
+
+  
+SyntaxError (/Users/flatironschool/rails-project-mode-web-103017/app/views/sessions/new.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...append=( f.submit, “log in” );@output_buffer.safe_append...
+...                               ^):
+  
+app/views/sessions/new.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:19:18 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 38ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url: login_path, method: :post do |f| %>
+    2:   <%= f.label :email %>
+    3:   <%= f.text_field :email %>
+    4: 
+  
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__943765106264823823_70153254768540'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:20:00 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 48ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, :url => signup_path, :method => "post" do |f|  %>
+    2:   <%= f.label :email %>
+    3:   <%= f.text_field :email %>
+    4: 
+  
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__943765106264823823_70153254852060'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:20:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 48ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, :url => login_path, :method => "post" do |f|  %>
+    2:   <%= f.label :email %>
+    3:   <%= f.text_field :email %>
+    4: 
+  
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__943765106264823823_70153181256540'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:22:40 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1963.3ms)
+Completed 500 Internal Server Error in 1995ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `‘users’' for #<#<Class:0x007f9ba69814f0>:0x007f9ba3648390>):
+     6:   <%= f.password_field :password %>
+     7: 
+     8:  <%= f.submit %>
+     9:   Or <%= link_to(controller: ‘users’, action: ‘new’) { ‘sign up’ } %>
+    10: <% end %>
+  
+app/views/sessions/new.html.erb:9:in `block in _app_views_sessions_new_html_erb__943765106264823823_70153193860280'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__943765106264823823_70153193860280'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:23:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3195.5ms)
+Completed 500 Internal Server Error in 3235ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `‘users_controller’' for #<#<Class:0x007f9ba69814f0>:0x007f9ba06c68d8>):
+     6:   <%= f.password_field :password %>
+     7: 
+     8:  <%= f.submit %>
+     9:   Or <%= link_to(controller: ‘users_controller’, action: ‘new’) { ‘sign up’ } %>
+    10: <% end %>
+  
+app/views/sessions/new.html.erb:9:in `block in _app_views_sessions_new_html_erb__943765106264823823_70153242168260'
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__943765106264823823_70153242168260'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:23:56 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 334ms (Views: 321.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:24:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 34ms
+
+
+  
+SyntaxError (/Users/flatironschool/rails-project-mode-web-103017/app/views/sessions/new.html.erb:8: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...r.append=( f.submit, "Log In" );@output_buffer.safe_append='
+...                               ^
+/Users/flatironschool/rails-project-mode-web-103017/app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/flatironschool/rails-project-mode-web-103017/app/views/sessions/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/flatironschool/rails-project-mode-web-103017/app/views/sessions/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/sessions/new.html.erb:8: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/sessions/new.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/sessions/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/sessions/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:24:40 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 296ms (Views: 281.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:24:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oAj3YCED/1Pq9RlI6AVSHgbe7OHadX0NoIYXdLQNWEWpl7iD/hyBbXo81tbGiQqhch6x5FQDitHH9IBJUelomA==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 1353ms (ActiveRecord: 11.7ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<SessionsController:0x007f9ba6a9a8f0>
+Did you mean?  @user):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:25:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oAj3YCED/1Pq9RlI6AVSHgbe7OHadX0NoIYXdLQNWEWpl7iD/hyBbXo81tbGiQqhch6x5FQDitHH9IBJUelomA==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 310ms (ActiveRecord: 10.6ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:26:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 318ms (Views: 303.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:26:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RIOo8nX7a0Afn5zNaN17UAR/8HaQCYXwmJ0k4UOuq8hNHOcRquQVfo9WU1NGUSPvcL+tcx5/ciz/77PcpkqbFQ==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+Completed 500 Internal Server Error in 42768ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:27:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 421ms (Views: 406.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:27:41 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cIeBnWWyeMlaanJCoSmuXLqbRwNPFXyYvqXQBxDA7955GM5+uq0G98qjvdyPpfbjzlsaBsFji0TZ10c69STfAw==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+Completed 500 Internal Server Error in 8872ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:28:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cIeBnWWyeMlaanJCoSmuXLqbRwNPFXyYvqXQBxDA7955GM5+uq0G98qjvdyPpfbjzlsaBsFji0TZ10c69STfAw==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+Completed 500 Internal Server Error in 7145ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:28:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 346ms (Views: 319.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:28:15 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rau7++KwVozKqbdykOndM1qMyHswOT5mcsMrENZHVd1MNPQYPa8oslpgeOy+ZYWMLkyVfr5PyboVsbwtM6NlAA==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 325ms (ActiveRecord: 10.4ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started POST "/login" for 127.0.0.1 at 2017-12-07 10:28:32 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rau7++KwVozKqbdykOndM1qMyHswOT5mcsMrENZHVd1MNPQYPa8oslpgeOy+ZYWMLkyVfr5PyboVsbwtM6NlAA==", "/sessions"=>{"email"=>"Elli@Shim.com", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+Completed 500 Internal Server Error in 135671ms
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:30:48 -0500
+  
+Processing by SessionsController#new as HTML
+SystemExit (exit):
+  
+  Rendering sessions/new.html.erb within layouts/application
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+  Rendered sessions/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 1175ms (Views: 1159.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:30:52 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 306ms (Views: 290.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-12-07 10:30:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JUizPYzWOUU4JGqFMMfNYm0TIx5SRUrYx2G/fe3Drdks1/zeU8lHe6jtpRseS5XdGdN+G9wzvQSgEyhACCedBA==", "email"=>"Elli@Shim.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 20178ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:31:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 334ms (Views: 306.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-12-07 10:31:20 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CpP/YUi8pXMUlnhaBXAHwAtNevjTnRJGYGxRR40ib2QDDLCCl6PbTYRft8Qr/F9/f40n/V3r5ZoHHsZ6aMZfuQ==", "email"=>"Elli@Shim.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Elli@Shim.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 431ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:31:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11132ms (ActiveRecord: 3.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:30:in `show'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:31:43 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 25ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:31:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 32900ms (ActiveRecord: 3.9ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/users_controller.rb:30:in `show'
+Started GET "/login" for 127.0.0.1 at 2017-12-07 10:32:18 -0500
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 324ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2017-12-07 10:32:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 314ms (Views: 283.1ms | ActiveRecord: 2.7ms)
+
+

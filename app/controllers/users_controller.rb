@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  # before_action :authorize, only: [:show, :edit, :update, :delete]
   def new
     @user = User.new
   end
@@ -13,13 +13,19 @@ class UsersController < ApplicationController
     @user.birthday = @b_day
     if @user.save
       redirect_to @user
+      session[:user_id] = @user.id
+      redirect_to user_path(@user)
     else
       render :new
     end
   end
 
   def show
-    @user = User.find(params[:id])
+    if current_user.id == params[:id].to_i
+         @user = User.find(params[:id])
+    else
+       redirect_to user_path(current_user.id)
+    end
   end
 
 
@@ -28,12 +34,20 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
     @month = params[:user]["birthday(2i)"]
     @day = params[:user]["birthday(3i)"]
     @year = params[:user]["birthday(1i)"]
     @b_day = "#{@year}-#{@month}-#{@day}".to_date
-    @user = User.find(params[:id])
-    @user.update(first_name: params[:user][:first_name], last_name: params[:user][:last_name], birthday: @b_day)
+    @user.birthday = @b_day
+
+    # @month = params[:user]["birthday(2i)"]
+    # @day = params[:user]["birthday(3i)"]
+    # @year = params[:user]["birthday(1i)"]
+    # @b_day = "#{@year}-#{@month}-#{@day}".to_date
+    # @user = User.find(params[:id])
+    # @user.update(first_name: params[:user][:first_name], last_name: params[:user][:last_name], birthday: @b_day)
     redirect_to user_path(@user)
   end
 
