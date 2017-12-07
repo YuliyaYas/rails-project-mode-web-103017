@@ -7,6 +7,8 @@
     <%= link_to "Events", events_path%>
     <a href="/users/<%=session[:email]%>/events">Your Events</a>
     <%= link_to "Categories", categories_path%>
+    <%= link_to "Create Event", new_event_path%>
+
     <title>Mod2RailsProject</title>
     <%= csrf_meta_tags %>
 

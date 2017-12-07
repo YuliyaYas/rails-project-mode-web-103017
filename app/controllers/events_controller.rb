@@ -35,7 +35,7 @@ class EventsController < ApplicationController
     @user = current_user
     @event = Event.find(params[:id])
     @user.attend_event(@event)
-    redirect_to event_path(@event)
+    redirect_to "/users/#{@user.id}/events"
   end
 
   def edit

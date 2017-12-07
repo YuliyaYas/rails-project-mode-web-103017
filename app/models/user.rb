@@ -26,9 +26,11 @@ class User < ApplicationRecord
   end
 
   def fav_categories
-    Favorite.all.select do |f|
-     f.user_id == self.id
-    end
+    Favorite.all.map do |f|
+     if f.user_id == self.id
+       f.category
+     end
+    end.uniq
   end
 
   def host(event)
@@ -38,7 +40,7 @@ class User < ApplicationRecord
   def events_attending
     self.attendants.all.map do |a|
       a.event
-    end
+    end.uniq
   end
 
   def attend_event(event)

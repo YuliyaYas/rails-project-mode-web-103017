@@ -1,3 +1,24 @@
 <h1> <%= @user.to_s %> </h1>
-<%= @user.birthday %>
+<p> Birthday: <%= @user.birthday.strftime(" %B %d") %></p>
+<p> Favourite Categories:</p>
+<ul>
+  <% @user.fav_categories.each do |cat|%>
+  <li> <%= link_to cat.name, category_path(cat) %> </li>
+  <% end %>
+</ul>
+
+<p> Upcoming events: </p>
+<ul>
+  <% @user.upcomming.each do |e| %>
+  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
+  <% end %>
+</ul>
+
+<p> What's happening on your birthday? </p>
+<ul>
+  <% @user.birthday_events.each do |e|%>
+  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
+  <% end %>
+</ul>
+
 <%= link_to "Delete profile", user_path(@user), :data => {:confirm => "Are you sure?", :method => "Delete"}%>
