@@ -10479,3 +10479,270 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 314ms (Views: 283.1ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:40:18 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (438.2ms)
+Completed 500 Internal Server Error in 766ms (ActiveRecord: 19.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass
+Did you mean?  tap):
+    27:   <br></br>
+    28: 
+    29:   <%= f.label :user %>
+    30:   <%= f.collection_select :user_id, @user, :id, :to_s%>
+    31:   <br></br>
+    32:   <%= f.submit %>
+    33: <% end %>
+  
+app/views/events/new.html.erb:30:in `block in _app_views_events_new_html_erb___3103531780665235129_70153242350880'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___3103531780665235129_70153242350880'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:41:48 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (228.5ms)
+Completed 200 OK in 551ms (Views: 522.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:42:08 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DTAqnw9M/jUaWiSL8gduA4YN3RdDyvKkpgiz35f2FPEEr2V80FOAC4qT6xXciza88s2AEs28BXjBeiTichIkLA==", "event"=>{"name"=>"Test", "description"=>"test", "capacity"=>"19", "price"=>"19", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"41", "category_id"=>"1", "location"=>"test"}, "age"=>"19", "user"=>{":id"=>"\#{@user.id}"}, "commit"=>"Create Event"}
+Completed 500 Internal Server Error in 53666ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:13:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:43:08 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (276.1ms)
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:   <%= f.label :location %>
+    26:   <%= f.text_field :location%>
+    27:   <br></br>
+    28:   <input type="hidden" name="event[:user_id]" value="<%=@user.id%>">
+    29:   <%= f.submit %>
+    30: <% end %>
+    31: 
+  
+app/views/events/new.html.erb:28:in `block in _app_views_events_new_html_erb___3103531780665235129_70153244413420'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___3103531780665235129_70153244413420'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:43:52 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (415.8ms)
+Completed 500 Internal Server Error in 719ms (ActiveRecord: 17.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:   <%= f.label :location %>
+    26:   <%= f.text_field :location%>
+    27:   <br></br>
+    28:   <input type="hidden" name="event[:user_id]" value="<%=@user.id%>">
+    29:   <%= f.submit %>
+    30: <% end %>
+    31: 
+  
+app/views/events/new.html.erb:28:in `block in _app_views_events_new_html_erb___3103531780665235129_70153191358300'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___3103531780665235129_70153191358300'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:44:40 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (410.5ms)
+Completed 500 Internal Server Error in 727ms (ActiveRecord: 39.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:   <%= f.label :location %>
+    26:   <%= f.text_field :location%>
+    27:   <br></br>
+    28:   <input type="hidden" name="event[:user_id]" value="<%=@user.id%>">
+    29:   <%= f.submit %>
+    30: <% end %>
+    31: 
+  
+app/views/events/new.html.erb:28:in `block in _app_views_events_new_html_erb___3103531780665235129_70153244892080'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___3103531780665235129_70153244892080'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:45:22 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered events/new.html.erb within layouts/application (666.3ms)
+Completed 200 OK in 1269ms (Views: 964.1ms | ActiveRecord: 24.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:45:47 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e5yDqDO6v9FCTz6SdGr18pI4aycelsVYq9l9N0JWnRlyA8xL7KXB79KG8Qxa5q1N5vg2IpDgMoTMq+oKp7KtxA==", "event"=>{"name"=>"test", "description"=>"test", "capacity"=>"19", "price"=>"19", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"45", "category_id"=>"1", "location"=>"test", "user_id"=>"7"}, "age"=>"19", "commit"=>"Create Event"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 101418ms (ActiveRecord: 0.4ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:14:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:47:47 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (447.9ms)
+Completed 500 Internal Server Error in 795ms (ActiveRecord: 16.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    25:   <%= f.label :location %>
+    26:   <%= f.text_field :location%>
+    27:   <br></br>
+    28:   <input type="hidden" name="event[:user_id]" value="<%=@user.id%>">
+    29: 
+    30:   <%= f.submit %>
+    31: <% end %>
+  
+app/views/events/new.html.erb:28:in `block in _app_views_events_new_html_erb___3103531780665235129_70153230916680'
+app/views/events/new.html.erb:2:in `_app_views_events_new_html_erb___3103531780665235129_70153230916680'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:48:24 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (247.5ms)
+Completed 200 OK in 563ms (Views: 547.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:48:40 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+/ROwV2SyGnm+MkwVid//J9OlelC/eRkI2EEbdvYIa/yawEigo22V3YxBq54qydD647I7MyLE7hEE5NQPjwRcg==", "event"=>{"name"=>"test", "description"=>"test", "capacity"=>"19", "price"=>"19", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"48", "category_id"=>"1", "location"=>"test", ":user_id"=>"7"}, "age"=>"191", "commit"=>"Create Event"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameters: :date(2i), :date(3i), :date(1i), :date(4i), :date(5i), ::user_id
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 7.9ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"events", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:20:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:49:21 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (372.2ms)
+Completed 200 OK in 991ms (Views: 672.0ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:49:36 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zHQ4xyzejsADIKQf6flBaNybhOaz9FQNNtf+SJb1TnfF63ck88Hw/pPpa4HHdRnXqFvZ4z2Co9FRpWl1cxF+qg==", "event"=>{"name"=>"test", "description"=>"test", "capacity"=>"19", "price"=>"19", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"49", "category_id"=>"1", "location"=>"test", ":user_id"=>"7"}, "age"=>"19", "commit"=>"Create Event"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameters: :date(2i), :date(3i), :date(1i), :date(4i), :date(5i), ::user_id
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 553ms (ActiveRecord: 12.4ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"events", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:21:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:51:03 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (354.1ms)
+Completed 200 OK in 942ms (Views: 654.1ms | ActiveRecord: 18.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:51:19 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wkDvIcSfdp/fgGRKtJcTt9bfoPg5sOfOPhPN1XVNsjPL36DCG4AIoU9Jq9SaG0sIoh/9/bfGEBJZYVrokKmC7g==", "event"=>{"name"=>"test", "description"=>"test", "capacity"=>"19", "price"=>"19", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"51", "category_id"=>"1", "location"=>"test", "user_id"=>"7"}, "age"=>"19", "commit"=>"Create Event"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameters: :date(2i), :date(3i), :date(1i), :date(4i), :date(5i)
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 527ms (ActiveRecord: 11.5ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"events", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/events_controller.rb:21:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:52:34 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (391.5ms)
+Completed 200 OK in 987ms (Views: 683.9ms | ActiveRecord: 16.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:54:25 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GDJisEtTOYFlfetuEvyHIxlN95No3Gl9K+8miw+kuNkRrS1TlExHv/W0JPA8cN+cbY2qluaqnqFMnbG26kCIBA==", "event"=>{"name"=>"test", "description"=>"test", "capacity"=>"19", "price"=>"19", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"52", "category_id"=>"1", "location"=>"test", "user_id"=>"7"}, "age"=>"19", "commit"=>"Create Event"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameters: :date(2i), :date(3i), :date(1i), :date(4i), :date(5i)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 149380ms (ActiveRecord: 17.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/events_controller.rb:21:in `create'
+Started GET "/events/new" for 127.0.0.1 at 2017-12-07 10:57:30 -0500
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/new.html.erb within layouts/application (428.5ms)
+Completed 200 OK in 1032ms (Views: 706.5ms | ActiveRecord: 19.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-07 10:58:50 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dmHeTIuPs8ykjGe95EUFpYGQ4jMjJlo8vhX9mvdXf9l//pGvVJDN8jRFqCPKyV0a9VC/Nq1QreDZZ2qnErNPBA==", "event"=>{"name"=>"Holiday Party", "description"=>"soju shots every 30 seconds", "age"=>"21", "capacity"=>"15", "price"=>"Free", "date(2i)"=>"12", "date(3i)"=>"8", "date(1i)"=>"2017", "date(4i)"=>"15", "date(5i)"=>"57", "category_id"=>"5", "location"=>"11 Broadway st, NY, 10004", "user_id"=>"7"}, "commit"=>"Create Event"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameters: :date(2i), :date(3i), :date(1i), :date(4i), :date(5i)
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "date", "age", "capacity", "user_id", "category_id", "created_at", "updated_at", "price", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Holiday Party"], ["description", "soju shots every 30 seconds"], ["date", "2017-12-08 15:57:00"], ["age", "21"], ["capacity", "15"], ["user_id", 7], ["category_id", 5], ["created_at", "2017-12-07 15:58:51.435347"], ["updated_at", "2017-12-07 15:58:51.435347"], ["price", "Free"], ["location", "11 Broadway st, NY, 10004"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/6
+Completed 302 Found in 608ms (ActiveRecord: 22.6ms)
+
+
+Started GET "/events/6" for 127.0.0.1 at 2017-12-07 10:58:51 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mEvent Load (2.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mComment Load (1.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."event_id" = ?[0m  [["event_id", 6]]
+  Rendered events/show.html.erb within layouts/application (158.6ms)
+Completed 200 OK in 726ms (Views: 440.3ms | ActiveRecord: 12.4ms)
+
+

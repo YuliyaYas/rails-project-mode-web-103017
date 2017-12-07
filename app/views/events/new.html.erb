@@ -7,7 +7,7 @@
   <%= f.text_area :description %>
   <br></br>
   <%= f.label "Minimum Age" %>
-  <input type="integer" name="age" value="minimum age">
+  <input type="integer" name="event[age]" value="minimum age">
   <%#= f.integer_field :age, :value => "enter minimum age for entry" %>
   <br></br>
   <%= f.label "Max Capacity" %>
@@ -25,10 +25,8 @@
   <%= f.label :location %>
   <%= f.text_field :location%>
   <br></br>
+  <input type="hidden" name="event[user_id]" value="7">
 
-  <%= f.label :user %>
-  <%= f.collection_select :user_id, User.all, :id, :to_s%>
-  <br></br>
   <%= f.submit %>
 <% end %>
 

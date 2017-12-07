@@ -9,13 +9,15 @@ class EventsController < ApplicationController
   end
 
   def create
+    @user = User.find(session[:email])
+    @event = Event.new(event_params)
     @start_hour = params[:event]["date(4i)"].to_i
     @start_min = params[:event]["date(5i)"].to_i
     @month = params[:event]["date(2i)"].to_i
     @day = params[:event]["date(3i)"].to_i
     @year = params[:event]["date(1i)"].to_i
-    @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
-    @event = Event.create(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date, location:params[:event][:location], age: params[:age], capacity: params[:event][:capacity])
+    @event.date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
+    @event.save
     redirect_to event_path(@event)
   end
 
@@ -35,14 +37,15 @@ class EventsController < ApplicationController
 
   def update
     # byebug
+    @event = Event.find(params[:id])
+    @event.update(event_params)
     @start_hour = params[:event]["date(4i)"].to_i
     @start_min = params[:event]["date(5i)"].to_i
     @month = params[:event]["date(2i)"].to_i
     @day = params[:event]["date(3i)"].to_i
     @year = params[:event]["date(1i)"].to_i
-    @date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
-    @event = Event.find(params[:id])
-    @event = Event.update(name:params[:event][:name], description: params[:event][:description], price: params[:event][:price], category_id: params[:event][:category_id], user_id: params[:event][:user_id], date: @date, location:params[:event][:location])
+    @event.date = DateTime.new(@year,@month,@day,@start_hour,@start_min)
+
     redirect_to event_path(@event)
   end
 
@@ -54,8 +57,8 @@ class EventsController < ApplicationController
 
   private
 
-  def event_params(*args)
-    params.require(:event).permit(*args)
+  def event_params
+    params.require(:event).permit(:name, :description, :price, :category_id, :user_id, :age, :capacity, :location)
   end
 
 end
