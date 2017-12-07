@@ -41,7 +41,11 @@ class User < ApplicationRecord
   end
 
   def attend_event(event)
+    if !self.events_attending.include?(event)
     Attendant.create(user_id: self.id, event_id: event.id)
+    else
+      "You're already going to this event!"
+    end
   end
 
 

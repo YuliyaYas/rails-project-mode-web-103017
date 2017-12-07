@@ -22,12 +22,20 @@ class EventsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:email])
     @event = Event.find(params[:id])
     @comment = Comment.new
   end
 
   def attendants
     @event = Event.find(params[:id])
+  end
+
+  def user_attend
+    @user = current_user
+    @event = Event.find(params[:id])
+    @user.attend_event(@event)
+    redirect_to event_path(@event)
   end
 
   def edit
