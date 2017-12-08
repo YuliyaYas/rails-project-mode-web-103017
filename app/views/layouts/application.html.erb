@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <%if logged_in?%>
-    <a href="/users/<%=session[:email]%>">Profile</a>
-    <%= link_to "Events", events_path%>
-    <a href="/users/<%=session[:email]%>/events">Your Events</a>
-    <%= link_to "Categories", categories_path%>
-    <%= link_to "Create Event", new_event_path%>
-    <%= link_to "Log Out", logout_path%>
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="/users/<%=session[:email]%>">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/events">Events</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/categories">Categories</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/events/new">New Event</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/logout">Logout</a>
+  </li>
+</ul>
 <%else%>
-<%= link_to "Log In", login_path%>
-<%=link_to "Sign Up", signup_path%>
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active" href="/login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/signup">Signup</a>
+  </li>
+</ul>
 <%end%>
     <title>Mod2RailsProject</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <div class="container">
+    <div class="content">
+      <body>
+        <%= yield %>
+      </body>
+    </div>
+  </div>
 </html>
