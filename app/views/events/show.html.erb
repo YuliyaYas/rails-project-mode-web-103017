@@ -1,34 +1,38 @@
-<h1><%= @event.name %> </h1>
-<h3>Host: <%=link_to @event.host.to_s, visitor_path(@event.host)%>   |    Price: <%= @event.price %>    |    Date: <%= @event.date.strftime(" %A, %B %d, %Y")%>, at<%= @event.date.strftime(" %H:%M")%> </h3>
+<h1 class="text-center"><%= @event.name %> </h1>
+<h3>Host: <%=link_to @event.host.to_s, visitor_path(@event.host)%></h3>
+<p><strong>Date:</strong> <%= @event.date.strftime(" %A, %B %d, %Y")%>, at<%= @event.date.strftime(" %H:%M")%></p>
+<p><strong>Price: </strong><%= @event.price %></p>
 <br></br>
 <h3> Location: <%= @event.location %> </h3>
 <br></br>
-<h2> Description: </h2>
+<h3> Description: </h3>
 <p><%= @event.description %> </p>
 <br></br>
-<a href="https://www.google.com/maps/place/11+Broadway,+New+York,+NY+10004" target="_blank">Directions to the Event</a>
+
 <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.093147301248!2d-73.98216588444325!3d40.75997597932675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f8d61b2f3d%3A0x92c4e681d9aada95!2sRadio+City+Music+Hall!5e0!3m2!1sen!2sus!4v1512525498336" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 <br></br>
 <%= link_to "See All Attendants", event_attendants_path(@event)%> <br />
 <%= link_to "Attend", user_attend_path(@event)%> <br />
-<%= link_to "Delete event", event_path(@event), :data => {:confirm => "Are you sure?", :method => "Delete"}%>
-
-<%= form_tag event_path(@event) do %>
-  <%= label_tag "Add comment:" %>
-  <%= text_area_tag :content %>
-  <br></br>
-  <%#= label_tag :user %>
-  <input type="hidden" name="user_id" value="<%=@user.id%>">
-  <br></br>
-  <%= submit_tag "Submit comment" %>
-<% end %>
 <br></br>
+
 <% @event.comments.each do |comment| %>
   <p> <strong> <%= comment.content %> </strong></p>
   <%= link_to comment.user.to_s, visitor_path(comment.user) %>
   <br></br>
 <% end %>
 
+<%= form_tag event_path(@event) do %>
+  <%= label_tag "Add comment:" %>
+  <%= text_area_tag :content, nil, class: "form-control" %>
+  <input type="hidden" name="user_id" value="<%=@user.id%>">
+  <%= submit_tag "Submit comment" %>
+<% end %>
 <br></br>
-<p>Directions: </p>
+
+
+<br></br>
+<a href="https://www.google.com/maps/place/11+Broadway,+New+York,+NY+10004" target="_blank">Directions to the Event</a>
+<br></br>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.5795375244807!2d-74.0162589847545!3d40.70525694596536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1160e947a5%3A0x72aadf7a67458ced!2s615%2C+11+Broadway%2C+New+York%2C+NY+10004!5e0!3m2!1sen!2sus!4v1512705188736" width="300" height="150" frameborder="20" style="border:0" allowfullscreen></iframe>
+<br></br>
+<%= link_to "Delete event", event_path(@event), :data => {:confirm => "Are you sure?", :method => "Delete"}%>

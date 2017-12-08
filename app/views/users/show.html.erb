@@ -20,5 +20,5 @@
   <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
   <% end %>
 </ul>
-
+<br></br>
 <%= link_to "Delete profile", user_path(@user), :data => {:confirm => "Are you sure?", :method => "Delete"}%>

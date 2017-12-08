@@ -1,39 +1,33 @@
-<h1> New Event Form </h1>
+
+<h1 class="text-center"> New Event Form </h1>
 <%= form_for @event do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "form-control" %>
   <br></br>
   <%= f.label :description %>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, class: "form-control" %>
   <br></br>
   <%= f.label "Minimum Age" %>
-  <input type="integer" name="event[age]" value="minimum age">
-  <%#= f.integer_field :age, :value => "enter minimum age for entry" %>
+  <%= f.number_field :age, class: "form-control" %>
   <br></br>
   <%= f.label "Max Capacity" %>
-  <%= f.text_field :capacity, :value => "enter maximum capacity" %>
+  <%= f.text_field :capacity, class: "form-control" %>
   <br></br>
   <%= f.label :price %>
-  <%= f.text_field :price, :value => "$" %>
+  <%= f.text_field :price, :value => "$", class: "form-control"%>
+  <br></br>
+  <%= f.label :location %>
+  <%= f.text_field :location, class: "form-control"%>
+  <br></br>
+  <%= f.label :category %>
+  <%= f.collection_select :category_id, Category.all, :id, :name, class: "form-control"%>
   <br></br>
   <%= f.label :date %>
   <%= f.datetime_select :date, start_year: 2017, order:[:month, :day, :year] %>
   <br></br>
-  <%= f.label :category %>
-  <%= f.collection_select :category_id, Category.all, :id, :name%>
-  <br></br>
-  <%= f.label :location %>
-  <%= f.text_field :location%>
-  <br></br>
+
+
   <input type="hidden" name="event[user_id]" value="7">
 
-  <%= f.submit %>
+  <%= f.submit "Submit", class: "btn btn-default" %>
 <% end %>
-
-
-<!-- <%#= f.label :start_time %>
-<%#= f.time_select :start_time, min: Time.now%>
-<br></br>
-<%#= f.label :end_time %>
-<%#= f.time_select :end_time, min: Time.now%>
-<br></br> -->
