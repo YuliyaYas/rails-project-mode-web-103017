@@ -3,7 +3,9 @@
 <p> Favourite Categories:</p>
 <ul>
   <% @user.fav_categories.each do |cat|%>
+  <%if cat%>
   <li> <%= link_to cat.name, category_path(cat) %> </li>
+  <%end%>
   <% end %>
 </ul>
 

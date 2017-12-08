@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :posts, :class_name => "Comment"
   validates :birthday, presence: true
   validate :old_enough
+  validates :email, presence: true
+
 
   def to_s
     self.first_name + ' ' + self.last_name

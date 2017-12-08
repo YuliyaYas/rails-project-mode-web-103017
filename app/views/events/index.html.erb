@@ -1,7 +1,14 @@
-<h1>All Events</h1>
-<ul>
-  <% @events.all.each do |e|%>
-  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
-</ul>
+<h1 class="text-center">Browse Events</h1>
 
-<%end%>
+<br></br>
+<div class="row text-center">
+  <% @events.all.each do |e|%>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img srcset="https://images.pexels.com/photos/625644/pexels-photo-625644.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="Yo" width="200" height="100">
+        <p><strong><%= link_to e.name, event_path(e)%> </strong></p>
+        <p>Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%></strong></p>
+      </div>
+    </div>
+  <% end %>
+</div>
