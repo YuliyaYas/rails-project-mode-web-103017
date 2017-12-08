@@ -2,9 +2,9 @@
 <h3>Host: <%=link_to @event.host.to_s, visitor_path(@event.host)%></h3>
 <p><strong>Date:</strong> <%= @event.date.strftime(" %A, %B %d, %Y")%>, at<%= @event.date.strftime(" %H:%M")%></p>
 <p><strong>Price: </strong><%= @event.price %></p>
-<br></br>
-<h3> Location: <%= @event.location %> </h3>
-<br></br>
+<p><strong>Location: </strong><%= @event.location %></p>
+<hr>
+<br>
 <h3> Description: </h3>
 <p><%= @event.description %> </p>
 <br></br>

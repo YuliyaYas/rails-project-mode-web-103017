@@ -7,19 +7,21 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    @month = params[:user]["birthday(2i)"]
-    @day = params[:user]["birthday(3i)"]
-    @year = params[:user]["birthday(1i)"]
-    @b_day = "#{@year}-#{@month}-#{@day}".to_date
-    @user.birthday = @b_day
-    if @user.save
-      session[:user_id] = @user.id
-      redirect_to user_path(@user)
-    else
-      render :new
+      @user = User.new(user_params)
+      @month = params[:user]["birthday(2i)"]
+      @day = params[:user]["birthday(3i)"]
+      @year = params[:user]["birthday(1i)"]
+      @b_day = "#{@year}-#{@month}-#{@day}".to_date
+      @user.birthday = @b_day
+      if @user.save
+        session[:user_id] = @user.id
+        flash[:success] = "Welcome!"
+        redirect_to user_path(@user)
+      else
+        flash[:danger] = "Get Big!"
+        render :new
+      end
     end
-  end
 
   def show
     if logged_in? && current_user.id == params[:id].to_i
@@ -39,22 +41,31 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-    @user.update(user_params)
-    @month = params[:user]["birthday(2i)"]
-    @day = params[:user]["birthday(3i)"]
-    @year = params[:user]["birthday(1i)"]
-    @b_day = "#{@year}-#{@month}-#{@day}".to_date
-    @user.birthday = @b_day
+      if logged_in? && current_user.id == params[:id].to_i
+        @user = User.find(params[:id])
+        @user.update(user_params)
+        @month = params[:user]["birthday(2i)"]
+        @day = params[:user]["birthday(3i)"]
+        @year = params[:user]["birthday(1i)"]
+        @b_day = "#{@year}-#{@month}-#{@day}".to_date
+        @user.birthday = @b_day
+        flash[:success] = "Your Profile Has Been Updated!"
+        redirect_to user_path(@user)
+      else
+        flash[:danger] = "This aint you SON!"
+      end
+    end
 
-    redirect_to user_path(@user)
-  end
-
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to new_user_path
-  end
+    def destroy
+        if logged_in? && current_user.id == params[:id].to_i
+          @user = User.find(params[:id])
+          @user.destroy
+          flash[:success] = "Your Profile Has Been Deleted!"
+          redirect_to signup_path
+        else
+          flash[:danger] = "This aint you SON!"
+        end
+      end
 
   def events
     @user = current_user
@@ -63,11 +74,12 @@ class UsersController < ApplicationController
   end
 
   def favorite
-    @user = current_user
-    @category = Category.find(params[:id])
-    @user.add_favorite(@category)
-    redirect_to "/users/#{@user.id}/events"
-  end
+      @user = current_user
+      @category = Category.find(params[:id])
+      @user.add_favorite(@category)
+      flash[:success] = "#{@category.name} was added to your favourites!"
+      redirect_to "/users/#{@user.id}/events"
+    end
   private
 
   def user_params

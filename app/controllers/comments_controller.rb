@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @event = Event.find(params[:id])
     @comment.event_id = @event.id
     @comment.save
+    flash[:success] = "Speak your mind: Rule #1 of Best Life Living"
     redirect_to event_path(@event)
   end
 
@@ -34,14 +35,14 @@ class CommentsController < ApplicationController
   end
 
   def authorized
-    @comment = Comment.find(params[:id])
-    @event = @comment.event_id
-    @user = current_user
-    if @comment.user_id == @user.id
-    else
-      flash[:message] = "This aint your son!"
-      redirect_to event_path(@event)
-    end
+      @comment = Comment.find(params[:id])
+      @event = @comment.event_id
+      @user = current_user
+      if @comment.user_id == @user.id
+      else
+        flash[:message] = "This aint yours SON!"
+        redirect_to event_path(@event)
+      end
 
   end
 end

@@ -1,6 +1,16 @@
-<h1>All Attendants</h1>
-<ul>
-<% @event.attendants.each do |a|%>
-  <li><%= link_to a.user.to_s, user_path(a.user)%></li>
-<%end%>
-</ul>
+<h1 class="text-center">All Attendants</h1>
+<%if @event.attendants.count == 0%>
+  <br>
+  <p> No one had sign up yet!</p>
+  <br><br><br><br><br><br>
+
+  <% else %>
+  <br>
+  <ul>
+  <% @event.attendants.each do |a|%>
+    <h2><%= link_to a.user.to_s, user_path(a.user)%></h2>
+    <hr>
+  <%end%>
+  </ul>
+  <br><br>
+<% end %>

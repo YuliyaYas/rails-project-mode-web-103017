@@ -8,22 +8,20 @@ class SessionsController < ApplicationController
 
 
   def create
-    @user = User.find_by(email: params[:email])
-    # byebug
-
-    if @user && @user.authenticate(params[:password])
-
-      session[:email] = @user.id
-      flash[:message] = "Welcome #{@user.to_s}"
-      redirect_to @user
-    else
-      flash[:message] = "Wrong username and password"
-      redirect_to login_path
+      @user = User.find_by(email: params[:email])
+      if @user && @user.authenticate(params[:password])
+        session[:email] = @user.id
+        flash[:success] = "Welcome Back #{@user.first_name}!"
+        redirect_to @user
+      else
+        flash[:danger] = "Wrong!...What is this? Amateur Hour?"
+        redirect_to login_path
+      end
     end
-  end
 
-  def destroy
-    session[:email] = nil
-    redirect_to login_path
-  end
+    def destroy
+        session[:email] = nil
+        flash[:danger] = "We Didn't Want You Here ANYWAY!"
+        redirect_to login_path
+      end
 end

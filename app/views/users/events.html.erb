@@ -1,15 +1,28 @@
-<h1>Your Events</h1>
+
+<h2>Your Events</h2>
+<br>
 <ul>
-  <% @events.each do |e|%>
-  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
+<% @events.each do |e|%>
+  <%if e%>
+  <li><%= link_to e.name, event_path(e)%></li>
+  <p>Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%> - <%=e.price%></p>
+  <%end%>
+  <br>
+  <% end %>
 </ul>
 
-<%end%>
+<br>
+<hr>
 
-<h1>Events You're Attending</h1>
+
+<h2>Events You're Attending</h2>
+<br>
 <ul>
   <% @events_attending.each do |e|%>
-  <li><%= link_to e.name, event_path(e)%> | <%=e.category.name%> | <%=e.price%> | Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%>  </li>
+  <%if e%>
+  <li><%= link_to e.name, event_path(e)%></li>
+  <p>Date: <%= e.date.strftime(" %A, %B %d, %Y") %>, at <%= e.date.strftime(" %H:%M")%> - <%=e.price%></p>
+  <%end%>
+  <br>
+  <% end %>
 </ul>
-
-<%end%>

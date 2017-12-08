@@ -68,10 +68,11 @@ def seed_users
   User.create(first_name: "Elli", last_name: "Shim", email: "elli@shim.com", birthday: date8, password: "1234", password_confirmation: "1234")
 end
 def seed_events
-  Event.create(name: "Tribeca Film Festival", description: "Watch fancy movies and stuff", date: "2018-10-18 15:00:00", age: "21", capacity: "5", user_id: 2, category_id: 2, price: "$50", location: "New York City", media: "https://tribecafilm.com/festival")
+  Event.create(name: "Tribeca Film Festival", description: "As a champion for emerging voices in film, the Tribeca Film Festival is thrilled to present the industry’s freshest talents and most original forms of storytelling in its Tribeca N.O.W. (New Online Work) section.
+The N.O.W. Showcase curates a selection of ten independent, online creators’ latest work that will be shown at world premiere screenings before being made available online at TribecaFilm.com. In addition, a slate of N.O.W. Special Screenings will be followed by dynamic conversations with creators, talent, and special guests. And the private Creators Market pays it forward, bringing together online storytellers looking to pitch new projects with a curated group of industry leaders interested in engaging up-and-coming online talent.", date: "2018-10-18 15:00:00", age: "21", capacity: "5", user_id: 2, category_id: 2, price: "$50", location: "260 West 23rd Street | between 7th & 8th Avenues", media: "https://tribecafilm.com/festival")
   Event.create(name: "Flatiron Movie Night", description: "Life and times of Flatiron Students (soju shots not included)", date: "2018-09-10 19:00:00", age: "18", capacity: "25", user_id: 1, category_id: 2, price: "Free", location: "11 Broadway st, NY, 10004", media: "https://flatironschool.com/")
   Event.create(name: "K&K House Party", description: "Karaoke and K-Pop", date: "2017-12-12 21:30:00", age: "21", capacity: "50", user_id: 1, category_id: 6, price: "$10", location: "111 8th Ave, New York, NY 10011", media: "https://www.youtube.com/watch?v=OwJPPaEyqhI")
-  Event.create(name: "Gallery Opening in Chelsea", description: "Admire fancy art and stuff", date: "2018-03-31 22:00:00", age: "21", capacity: "15", user_id: 2, category_id: 1, price: "Free", location: "111 8th Ave, New York, NY 10011", media: "http://www.pacegallery.com/")
+  Event.create(name: "Gallery Opening in Chelsea", description: "Pace Gallery and Pace/MacGill Gallery are honored to announce their representation of The Richard Avedon Foundation with an exhibition of Richard Avedon’s photographs and extensive archival materials drawn from Nothing Personal, Avedon’s 1964 collaboration with James Baldwin. This will be the first comprehensive presentation of this period of Avedon’s work and will be on view at 537 West 24th Street from November 17, 2017 through January 13, 2018. An opening reception will be held on Thursday, November 16, from 6–8 PM. To coincide with the occasion, TASCHEN will republish a facsimile edition of Nothing Personal with an accompanying booklet containing a new introduction by Pulitzer Prize-winning critic Hilton Als and rare and unpublished Avedon photographs.", date: "2018-03-31 22:00:00", age: "21", capacity: "15", user_id: 2, category_id: 1, price: "Free", location: "111 8th Ave, New York, NY 10011", media: "http://www.pacegallery.com/")
   Event.create(name: "Google Meetup", description: "Talk to smart people and stuff", date: "2018-09-10 19:00:00", age: "18", capacity: "2500", user_id: 7, category_id: 9, price: "$100", location: "111 8th Ave, New York, NY 10011", media: "https://google.com")
   Event.create(name: "Open Mic", description: "Perform and stuff", date: "2018-09-10 19:00:00", age: "18", capacity: "250", user_id: 7, category_id: 7, price: "$25", location: "111 8th Ave, New York, NY 10011", media: "https://google.com")
   Event.create(name: "Harry Potter and the Cursed Child", description: "Fight Voldemort and make things levitate", date: "2018-03-31 19:00:00", age: "17", capacity: "20", user_id: 8, category_id: 2, price: "$100", location: "111 8th Ave, New York, NY 10011", media: "https://www.harrypottertheplay.com/us/")
@@ -83,7 +84,7 @@ Favorite.create(user_id: 1, category_id: 2)
 Favorite.create(user_id: 1, category_id: 9)
 Favorite.create(user_id: 1, category_id: 7)
 Favorite.create(user_id: 2, category_id: 1)
-Favorite.create(user_id: 2, category_id: 4)
+Favorite.create(user_id: 2, category_id: 2)
 Favorite.create(user_id: 2, category_id: 5)
 Favorite.create(user_id: 7, category_id: 7)
 Favorite.create(user_id: 7, category_id: 3)
