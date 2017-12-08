@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # User.create(first_name: "Tashawn", last_name: "Williams", birthdate: )
-arr = ["Art", "Film", "Festival", "Theatre", "Holiday Party", "Conference"]
+arr = ["Art", "Film", "Music", "Festival", "Food and Drink", "Party", "Theatre", "Seminar", "Networking"]
 
 def seed_category(arr)
   arr.each do |category_name|
